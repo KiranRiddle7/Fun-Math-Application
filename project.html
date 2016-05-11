@@ -1,0 +1,179 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="project.css">
+<script>
+
+score=0;
+
+function show(shown, hidden) {
+  document.getElementById(shown).style.display='block';
+  document.getElementById(hidden).style.display='none';
+  return false;
+}
+
+function correctanswer(x) {
+
+    k=x;
+	alert("Correct Answer");
+	score++;
+    if(k==1) {
+	return show('addqsn2','addqsn1');
+    }
+    if (k==2) {
+    	return show('addqsn3','addqsn2');
+    }
+    if (k==3) {
+    	return show('addqsn4','addqsn3');
+    }
+    if (k==4) {
+    	return show('addqsn5','addqsn4');
+    }
+}
+
+function  wronganswer() {
+
+	alert("Worng Answer");
+	score--;
+}
+
+function scorefn() {
+
+	alert("Your Score Is  " +score);
+	
+
+}
+
+</script>
+
+<body>
+	  
+
+	<div id="project" >
+
+		 
+		<h1><span> FUN WITH MATH </span></h1>
+
+		<div id="ctrls-container">
+
+			 <a href="#" onclick="return show('settings','project');">
+			   <button id="button2"> SETTINGS </button>
+			</a>
+
+			<a href="#" onclick="return show('play','project');">
+			   <button id="button1"> PLAY </button>
+			</a>
+
+			<a href="#" onclick="return show('instructions','project');">
+			   <button id="button3"> INSTRUCTIONS </button>
+			</a>
+		</div>
+		    
+	</div>
+
+	<div id="play" style="display:none">
+
+	<div id="playbg">
+	  <a href="#" onclick="return show('adding','play');">
+	 <div id="styleadd"> <img src="images/adding.jpg" alt="HTML tutorial"style="width:150px;height:150px;border:0"></div>
+	</a>
+
+
+	   <a href="#" onclick="return show('subtracting','play');">
+	 
+	<div id="stylesub"> <img src="images/subtracting.jpg" alt="HTML tutorial" style="width:150px;height:150px;border:0"></div>
+	</a> 
+	</div>
+	</div>
+
+	<div id="adding" style="display:none">
+
+
+	 <button id="level1" onclick="return show('addqsn1','adding');"> LEVEL 1 </button>
+	
+	    <button id="level2" onclick="return show('add1','adding');"> LEVEL 2 </button> 
+
+	    </div>
+
+	    <div id="subtracting" style="display:none">
+
+	    <div id="subtracting"> <button id="level1"> LEVEL 1 </button>
+	    <button id="level2"> LEVEL 2 </button> </div>
+
+	    </div>
+
+   <div id="addqsn1" style="display:none"> 
+
+      <div class="qns1bg">
+				
+				<div id="score-container">
+				<button id="score" onclick="return scorefn();">Score</button>
+				</div>
+
+     
+				<div class= "one"></div>
+				<div class= "two"></div>
+				<div class= "plus1"></div>
+				<a href="#" onclick="return wronganswer();">
+				<div class= "a1"></div>
+				</a>
+				<a href="#" onclick="return wronganswer();">
+				<div class= "a2"></div>
+				</a>
+				<a href="#" onclick="return correctanswer(1);">
+				<div class= "a3"> </div>
+				</a>
+				<a href="#" onclick="return wronganswer();">
+				<div class= "a4"></div>
+				</a>
+				
+ 		</div>
+
+  </div>
+
+  <div id="addqsn2" style="display:none"> 
+	
+	<div class="qns2bg">
+
+				<div class= 'four'></div>
+				<div class= 'plus2'></div>
+				<div class='five'></div>
+				<div class='c1'></div>
+				<div class='c2'></div>
+				<div class='c3'></div>
+				<div class='c4'></div>
+				<a href="#" onclick="return wronganswer();">
+				<div class='a5'></div>
+				</a>
+				<a href="#" onclick="return wronganswer();">
+				<div class='a6'></div>
+				</a>
+				<a href="#" onclick="return wronganswer();">
+				<div class='a7'></div>
+				</a>
+				<a href="#" onclick="return correctanswer(2);">
+				<div class='a8'></div>
+				</a>
+		
+		<div id="score-container">
+			<button id="score" onclick="return scorefn();">Score</button>
+		</div>
+
+  </div>
+
+ <div id="addqsn3" style="display:none"> 
+
+
+   <div id="page3"> <p> This Is Page 3 </p> </div>
+   </div>
+
+
+<div id="addqsn4" style="display: none;">
+  	 <div id="page3"> <p> This Is Page 4 </p> </div>
+
+  </div>
+  
+   
+</body>
+
+</head>
+</html>
