@@ -1,213 +1,903 @@
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="project.css">
-<script>
-
-score=0;
-
-function show(shown, hidden) {
-  document.getElementById(shown).style.display='block';
-  document.getElementById(hidden).style.display='none';
-  return false;
-}
-
-function correctanswer(x) {
-
-    k=x;
-	alert("Correct Answer");
-	score++;
-    if(k==1) {
-	return show('addqsn2','addqsn1');
-    }
-    if (k==2) {
-    	return show('addqsn3','addqsn2');
-    }
-    if (k==3) {
-    	return show('addqsn4','addqsn3');
-    }
-    if (k==4) {
-    	return show('addqsn5','addqsn4');
-    }
-}
-
-function  wronganswer() {
-
-	alert("Worng Answer");
-	score--;
-}
-
-function scorefn() {
-
-	alert("Your Score Is  " +score);
-	
-
-}
-
-</script>
+  <!-- syntax to link css file of the project to html document -->
+  <link rel="stylesheet" type="text/css" href="project.css">
+  <meta name='viewport' content='width = device-width, initial-scale = 1.0, user-scalable = no'/>
+  <!--Java script libraries  -->
+  <script type="text/javascript" src="jquery-2.1.3.min.js"></script>
+  <script type="text/javascript" src="introtoapps-april28.min.js"></script>
+  <!--syntax to link java script file of the project to html document  -->
+  <script type="text/javascript" src="project.js"></script>
 
 <body>
-	  
 
-	<div id="project" >
+  <!--div id of main page is named as "project" -->
+  <div id="project" >
+      <!--title of the page  -->
+      <h1><span> FUN WITH MATH </span></h1>
+      <!--div id for all the buttons in main page -->
+      <div id="ctrls-container">
 
-		 
-		<h1><span> FUN WITH MATH </span></h1>
+             <!--id for button "Settings" and navigation to settings page from main page  -->
+            <a href="#" onclick="return show('settings','project');">
+                 <button id="button2"> SETTINGS </button>
+            </a>
 
-		<div id="ctrls-container">
+            <!--id for button "Play" and navigation to settings page from main page  -->
+            <a href="#" onclick="return show('play','project');">
+               <button id="button1"> PLAY </button>
+            </a>
+            <!--id for button "Instructions" and navigation to settings page from main page  -->
+            <a href="#" onclick="return show('instructions','project');">
+                <button id="button3"> INSTRUCTIONS </button>
+                 </a>
+</div>
+  </div>
 
-			 <a href="#" onclick="return show('settings','project');">
-			   <button id="button2"> SETTINGS </button>
-			</a>
+  <!--div id for second page which is named as "play".-->
+  <div id="play" style="display:none">
+      <!--div id for the background of "play" page  -->
+      <div id="playbg">
+          <!--Navigation from play page to next page. When play button is clicked it navigates to "adding" page  -->
+          <a href="#" onclick="return show('adding','play');">
+               <!--image tag to display "adding" image on the page  -->
+               <div id="styleadd"> <img src="images/adding.jpg" alt="HTML"style="width:150px;height:150px;border:0"></div>
+          </a>
+          <!--Navigation from play page to next page. When play button is clicked it navigates to "subtracting" page  -->
+          <a href="#" onclick="return show('subtracting','play');">
+               <!--image tag to display "subtracting" image on the page  -->
+               <div id="stylesub"> <img src="images/subtracting.jpg" alt="HTML" style="width:150px;height:150px;border:0"></div>
+          </a>
+          <!--div id for back button  -->
+          <div id='Back'>
+               <!--button id for back button and navigation syntax is given to navigate from "play" page to the main page when we click on "back" button -->
+               <button id="back" onclick="return show('project','play');"> BACK </button></div>
+          </div>
 
-			<a href="#" onclick="return show('play','project');">
-			   <button id="button1"> PLAY </button>
-			</a>
-
-			<a href="#" onclick="return show('instructions','project');">
-			   <button id="button3"> INSTRUCTIONS </button>
-			</a>
-		</div>
-		    
-	</div>
-
-	<div id="play" style="display:none">
-
-	<div id="playbg">
-	  <a href="#" onclick="return show('adding','play');">
-	 <div id="styleadd"> <img src="images/adding.jpg" alt="HTML tutorial"style="width:150px;height:150px;border:0"></div>
-	</a>
-
-
-	   <a href="#" onclick="return show('subtracting','play');">
-	 
-	<div id="stylesub"> <img src="images/subtracting.jpg" alt="HTML tutorial" style="width:150px;height:150px;border:0"></div>
-	</a> 
-	</div>
-	</div>
-
-	<div id="adding" style="display:none">
+  </div>
 
 
-	 <button id="level1" onclick="return show('addqsn1','adding');"> LEVEL 1 </button>
-	
-	    <button id="level2" onclick="return show('add1','adding');"> LEVEL 2 </button> 
+  <div id="play" style="display:none">
+      <!--when reset button is click it navigates back to the "adding" page where we can select the options of adding and subtracting  -->
+      <div id="playbg">
+          <a href="#" onclick="return show('adding','reset');">
+              <div id="styleadd"> <img src="images/adding.jpg" alt="HTML"style="width:150px;height:150px;border:0"></div>
+          </a>
 
-	    </div>
+          <!--when reset button is click it navigates back to the "subtracting" page where we can select the options of adding and subtracting -->
+          <a href="#" onclick="return show('subtracting','reset');">
 
-	    <div id="subtracting" style="display:none">
+              <div id="stylesub"> <img src="images/subtracting.jpg" alt="HTML" style="width:150px;height:150px;border:0"></div>
+          </a>
+      </div>
+  </div>
 
-	     <button id="level1"> LEVEL 1 </button>
-	    <button id="level2"> LEVEL 2 </button> 
+  <!--when settings button is clicked we go to the page containing a sound track to play or pause it -->
+  <div id="settings" style="display:none">
+      <!-- div id for the audio container which is present in "settings" page -->
+      <div id="audioCnt">
+             <!--music tag for the music that is used in the web app -->
+             <audio src="sounds/twinkle.ogg" type="audio/mpeg" autoplay controls loop ></audio> <br><br><br>
+             <!--button id for back button and navigation syntax is given to navigate from "settings" page to the main page when we click on "back" button -->
+             <button id="back" onclick="return show('project','settings');"> BACK </button></div>
+      </div>
 
-	    </div>
+  </div>
 
-   <div id="addqsn1" style="display:none"> 
+  <!--div id for "Instructions" page, so when instructions button is clicked it navigates to a new page  -->
+  <div id= "instructions" style="display:none">
+       <!--paragraph tag to include text in the instructions page  -->
+       <li> You will have two categories Adding and Subtracting. </li>
+       <li> Adding and Subtracting contains two levels easy and medium where you have to answer the questions.</li>
+       <li> You need to calculate and click on the correct answers in the options below.</li>
+       <li> You get points for each correct answer and final score will be displayed after all the questions.</li>
+       <li> For every wrong answer, your score decreases. </li>
+    <button id="back" onclick="return show('project','instructions');"> BACK </button></div>
+  </div>
 
-			      <div class="qns1bg">
-							
-							<div id="score-container">
-							<button id="score" onclick="return scorefn();">Score</button>
-							</div>
+  <!--div id for "adding" page where page contains 3 buttons  -->
+  <div id="adding" style="display:none">
 
-			     
-							<div class= "one"></div>
-							<div class= "two"></div>
-							<div class= "plus1"></div>
-							<a href="#" onclick="return wronganswer();">
-							<div class= "a1"></div>
-							</a>
-							<a href="#" onclick="return wronganswer();">
-							<div class= "a2"></div>
-							</a>
-							<a href="#" onclick="return correctanswer(1);">
-							<div class= "a3"> </div>
-							</a>
-							<a href="#" onclick="return wronganswer();">
-							<div class= "a4"></div>
-							</a>
-							
-			 		</div>
+        <!--button id for "easy" and navigation is given to go question1 page of easy level in addition when we click on easy button  -->
+        <button id="easy" onclick="return show('addeasy1','adding');"> EASY </button>
+        <!--button id for "medium" and navigation is given to go question1 page of medium level in addition when we click on easy button  -->
+        <button id="medium" onclick="return show('addmedium1','adding');"> MEDIUM </button>
+        <!--button id for "back" and navigation is given to go back to main page when we click on easy button  -->
+
+        <button id="back" onclick="return show('play','adding');"> BACK </button>
+
+  </div>
+
+  <!--div id for "subtracting" page where page contains 3 buttons  -->
+  <div id="subtracting" style="display:none">
+        <!--button id for "easy" and navigation is given to go question1 page of easy level in subtraction when we click on easy button  -->
+        <button id="easy" onclick="return show('subeasy1','subtracting');"> EASY </button>
+        <!--button id for "medium" and navigation is given to go question1 page of medium level in subtraction when we click on easy button  -->
+        <button id="medium" onclick="return show('submedium1','subtracting');"> MEDIUM </button>
+        <!--button id for "back" and navigation is given to go back to main page when we click on easy button  -->
+
+        <button id="back" onclick="return show('play','subtracting');"> BACK </button>
+
+  </div>
+
+  <!--div id for addeasy1 which is the name of the page of first question in easy level of addition  -->
+  <div id='addeasy1' style="display:none">
+  <!--div id for background of question1 page -->
+        <div class='addquestion1bg'>
+              <!--div id's for all the images present in question1 page  -->
+              <div class= 'addone'></div>
+              <div class= 'addtwo'></div>
+              <div class= "plus"></div>
+              <!--when we click on wrong answer it returns a display that it is a wrong answer -->
+              <a href="#" onclick="return wronganswer();">
+                  <div class= 'a1'></div>
+              </a>
+              <a href="#" onclick="return wronganswer();">
+                  <div class= 'a2'></div>
+              </a>
+              <!--when we click on correct answer it returns a display that it is a correct answer and it navigates to second question-->
+              <a href="#" onclick="return correctanswer(1);">
+                  <div class= 'a3'> </div>
+              </a>
+              <!--when we click on wrong answer it returns a display that it is a wrong answer -->
+              <a href="#" onclick="return wronganswer();">
+                 <div class= 'a4'></div>
+              </a>
+              <!--div id for score which is displayed on every page  -->
+              <div id='score-container'>
+                    <!--button id for score and java script function is given to call the events present in it -->
+                    <button id='score' onclick="return scorefn();">SCORE</button>
+              </div>
+              <!--button id for "back" and navigation is given to go back to levels page("adding") when we click on easy button  -->
+              <div id='Back'>
+                    <button id='back' onclick="return show('adding','addeasy1');"> BACK </button>
+              </div>
+        </div>
+  </div>
+
+  <!--div id for addeasy2 which is the name of the page of second question in easy level of addition  -->
+  <div id='addeasy2' style="display:none;">
+        <!--div id for background of question2 page -->
+        <div class='addquestion2bg'>
+              <!--div id's for all the images present in question2 page  -->
+              <div class= 'addfour'></div>
+              <div class= 'plus'></div>
+              <div class='addfive'></div>
+              <div class='cloud1'></div>
+              <div class='cloud2'></div>
+              <div class='cloud3'></div>
+              <div class='cloud4'></div>
+              <!--when we click on wrong answer it returns a display that it is a wrong answer -->
+              <a href="#" onclick="return wronganswer();">
+                 <div class='a5'></div>
+              </a>
+              <a href="#" onclick="return wronganswer();">
+                 <div class='a6'></div>
+              </a>
+              <a href="#" onclick="return wronganswer();">
+                 <div class='a7'></div>
+              </a>
+              <!--when we click on correct answer it returns a display that it is a correct answer and it navigates to third question-->
+              <a href="#" onclick="return correctanswer(2);">
+                 <div class='a8'></div>
+              </a>
+              <!--div id for score which is displayed on every question page  -->
+              <div id='score-container'>
+              <!--button id for score and java script function is given to call the events present in it -->
+                   <button id='score' onclick="return scorefn();">SCORE</button>
+              </div>
+              <!--button id for "back" and navigation is given to go back to question1 page when we click on easy button  -->
+              <div id='Back'>
+                   <button id='back' onclick="return show('addeasy1','addeasy2');"> BACK </button>
+              </div>
+        </div>
+  </div>
+
+  <!--div id for addeasy3 which is the name of the page of third question in easy level of addition  -->
+  <div id='addeasy3' style="display: none;" >
+        <!--div id for background of question3 page -->
+        <div class='addquestion3bg'>
+              <!--div id's for all the images present in question3 page  -->
+              <div class='addtwo1'></div>
+              <div class='plus'></div>
+              <div class='addfive1'></div>
+              <div class='balloon1'></div>
+              <div class='balloon2'></div>
+              <div class='balloon3'></div>
+              <div class='balloon4'></div>
+              <!--when we click on correct answer it returns a display that it is a correct answer and it navigates to fourth question-->
+              <a href="#" onclick="return correctanswer(3);">
+                  <div class='a9'></div>
+              </a>
+              <!--when we click on wrong answer it returns a display that it is a wrong answer -->
+              <a href="#" onclick="return wronganswer();">
+                  <div class='a10'></div>
+              </a>
+              <a href="#" onclick="return wronganswer();">
+                  <div class='a11'></div>
+              </a>
+              <a href="#" onclick="return wronganswer();">
+                  <div class='a12'></div>
+              </a>
+              <!--div id for score which is displayed on every question page  -->
+              <div id='score-container'>
+                  <!--button id for score and java script function is given to call the events present in it -->
+                  <button id='score' onclick="return scorefn();">SCORE</button>
+              </div>
+              <!--button id for "back" and navigation is given to go back to question2 page when we click on easy button  -->
+              <div id='Back'>
+                  <button id='back' onclick="return show('addeasy2','addeasy3');"> BACK </button>
+              </div>
+        </div>
+  </div>
+
+   <!--div id for addeasy4 which is the name of the page of fourth question in easy level of addition  -->
+   <div id='addeasy4' style="display: none;" >
+        <!--div id for background of question4 page -->
+        <div class='addquestion4bg'>
+           <!--div id's for all the images present in question4 page  -->
+           <div class= 'addsix1'></div>
+           <div class= 'plus'></div>
+           <div class='addfour1'></div>
+           <div class='star1'></div>
+           <div class='star2'></div>
+           <div class='star3'></div>
+           <div class='star4'></div>
+           <!--when we click on wrong answer it returns a display that it is a wrong answer -->
+           <a href="#" onclick="return wronganswer();">
+               <div class='a13'></div>
+           </a>
+           <!--when we click on correct answer it returns a display that it is a correct answer and it navigates to fifth question-->
+           <a href="#" onclick="return correctanswer(4);">
+               <div class='a14'></div>
+           </a>
+           <a href="#" onclick="return wronganswer();">
+               <div class='a15'></div>
+           </a>
+           <a href="#" onclick="return wronganswer();">
+               <div class='a16'></div>
+           </a>
+           <!--div id for score which is displayed on every question page  -->
+           <div id='score-container'>
+               <!--button id for score and java script function is given to call the events present in it -->
+               <button id='score' onclick="return scorefn();">SCORE</button>
+           </div>
+           <!--button id for "back" and navigation is given to go back to question3 page when we click on easy button  -->
+           <div id='Back'>
+               <button id='back' onclick="return show('addeasy3','addeasy4');"> BACK </button>
+           </div>
+
+        </div>
 
    </div>
 
-  <div id="addqsn2" style="display:none;"> 
-	
-				<div class="qns2bg">
+   <!--div id for addeasy5 which is the name of the page of fifth question in easy level of addition  -->
+   <div id='addeasy5' style="display: none;" >
+        <!--div id for background of question5 page -->
+        <div class='addquestion5bg'>
+            <!--div id's for all the images present in question5 page  -->
+            <div class='addthree'></div>
+            <div class='plus'></div>
+            <div class='addzero'></div>
+            <div class='fish1'></div>
+            <div class='fish2'></div>
+            <div class='fish3'></div>
+            <div class='fish4'></div>
+            <!--when we click on wrong answer it returns a display that it is a wrong answer -->
+            <a href="#" onclick="return wronganswer();">
+                 <div class='a17'></div>
+            </a>
+            <a href="#" onclick="return wronganswer();">
+                 <div class='a18'></div>
+            </a>
+            <!--when we click on correct answer it returns a display that it is a correct answer and it navigates to next page-->
+            <a href="#" onclick="return correctanswer(5);">
+                 <div class='a19'></div>
+            </a>
+            <a href="#" onclick="return wronganswer();">
+                 <div class='a20'></div>
+            </a>
+            <!--div id for score which is displayed on every question page  -->
+            <div id='score-container'>
+            <!--button id for score and java script function is given to call the events present in it -->
+                 <button id='score' onclick="return scorefn();">SCORE</button>
+            </div>
+            <!--button id for "back" and navigation is given to go back to question4 page when we click on easy button  -->
+            <div id='Back'>
+                 <button id='back' onclick="return show('addeasy4','addeasy5');"> BACK </button>
+            </div>
+        </div>
+   </div>
 
-							<div class= 'four'></div>
-							<div class= 'plus2'></div>
-							<div class='five'></div>
-							<div class='c1'></div>
-							<div class='c2'></div>
-							<div class='c3'></div>
-							<div class='c4'></div>
-							<a href="#" onclick="return wronganswer();">
-							<div class='a5'></div>
-							</a>
-							<a href="#" onclick="return wronganswer();">
-							<div class='a6'></div>
-							</a>
-							<a href="#" onclick="return wronganswer();">
-							<div class='a7'></div>
-							</a>
-							<a href="#" onclick="return correctanswer(2);">
-							<div class='a8'></div>
-							</a>
-					
-							<div id="score-container">
-								<button id="score" onclick="return scorefn();">Score</button>
-							</div>
-
-			    </div>
+   <!--div id for subeasy1 which is the name of the page of first question in easy level of subtraction -->
+  <div id='subeasy1' style="display:none;">
+          <!--div id for background of question1 page -->
+          <div class='subquestion1bg'>
+                <!--div id's for all the images present in question1 page  -->
+                <div class='subsix'></div>
+                <div class='minus'></div>
+                <div class='subfive'></div>
+                <div class='star1'></div>
+                <div class='star2'></div>
+                <div class='star3'></div>
+                <div class='star4'></div>
+                <!--when we click on wrong answer it returns a display that it is a wrong answer -->
+                <a href="#" onclick="return wronganswer();">
+                    <div class='s1'></div>
+                </a>
+                <a href="#" onclick="return wronganswer();">
+                    <div class='s2'></div>
+                </a>
+                <a href="#" onclick="return wronganswer();">
+                    <div class='s3'></div>
+                </a>
+                <!--when we click on correct answer it returns a display that it is a correct answer and it navigates to next question page-->
+                <a href="#" onclick="return correctanswer(6);">
+                    <div class='s4'></div>
+                </a>
+                <!--div id for score which is displayed on every question page  -->
+                <div id='score-container'>
+                    <!--button id for score and java script function is given to call the events present in it -->
+                    <button id='score' onclick="return scorefn();">SCORE</button>
+                </div>
+                <!--button id for "back" and navigation is given to go back to levels page("subtracting") when we click on easy button  -->
+                <div id='Back'>
+                    <button id='back' onclick="return show('subtracting','subeasy1');"> BACK </button>
+                </div>
+          </div>
   </div>
 
-   <div id="addqsn3" style="display: none;" > 
-	
-				<div class="qns3bg">
-
-							<div class= 'four'></div>
-							<div class= 'plus2'></div>
-							<div class='five'></div>
-							<div class='c1'></div>
-							<div class='c2'></div>
-							<div class='c3'></div>
-							<div class='c4'></div>
-							<a href="#" onclick="return wronganswer();">
-							<div class='a5'></div>
-							</a>
-							<a href="#" onclick="return wronganswer();">
-							<div class='a6'></div>
-							</a>
-							<a href="#" onclick="return wronganswer();">
-							<div class='a7'></div>
-							</a>
-							<a href="#" onclick="return correctanswer(3);">
-							<div class='a8'></div>
-							</a>
-					
-							<div id="score-container">
-								<button id="score" onclick="return scorefn();">Score</button>
-							</div>
-
-			    </div>
-
-
+  <!--div id for subeasy2 which is the name of the page of second question in easy level of subtraction -->
+  <div id='subeasy2' style="display:none">
+          <!--div id for background of question2 page -->
+          <div class='subquestion2bg'>
+          <!--div id's for all the images present in question2 page  -->
+               <div class= "subnine"></div>
+               <div class= "minus"></div>
+               <div class= "subthree"></div>
+               <!--when we click on correct answer it returns a display that it is a correct answer and it navigates to next question page-->
+               <a href="#" onclick="return correctanswer(7);">
+                   <div class= "s5"></div>
+               </a>
+               <!--when we click on wrong answer it returns a display that it is a wrong answer -->
+               <a href="#" onclick="return wronganswer();">
+                   <div class= "s6"></div>
+               </a>
+               <a href="#" onclick="return wronganswer();">
+                   <div class= "s7"> </div>
+               </a>
+               <a href="#" onclick="return wronganswer();">
+                   <div class= "s8"></div>
+               </a>
+               <!--div id for score which is displayed on every question page  -->
+               <div id='score-container'>
+               <!--button id for score and java script function is given to call the events present in it -->
+                   <button id='score' onclick="return scorefn();">SCORE</button>
+               </div>
+                <!--button id for "back" and navigation is given to go back to question1 of subtraction when we click on easy button  -->
+               <div id='Back'>
+                   <button id='back' onclick="return show('subeasy1','subeasy2');"> BACK </button>
+               </div>
+          </div>
   </div>
 
-   <div id="addqsn4" style="display: none;" > 
-	
-				<div class="qns4bg">
-							
-							<div id="score-container">
-								<button id="score" onclick="return scorefn();"> Final Score</button>
-							</div>
-
-			  	</div>
-
+  <!--div id for subeasy3 which is the name of the page of third question in easy level of subtraction -->
+  <div id='subeasy3' style="display:none">
+             <!--div id for background of question3 page -->
+           <div class='subquestion3bg'>
+               <!--div id's for all the images present in question3 page  -->
+               <div class= "subseven"></div>
+               <div class= "minus"></div>
+               <div class= "subfour"></div>
+               <div class='cloud1'></div>
+               <div class='cloud2'></div>
+               <div class='cloud3'></div>
+               <div class='cloud4'></div>
+                <!--when we click on wrong answer it returns a display that it is a wrong answer -->
+               <a href="#" onclick="return wronganswer();">
+                    <div class= 's9'></div>
+               </a>
+               <a href="#" onclick="return wronganswer();">
+                    <div class= 's10'></div>
+               </a>
+                <!--when we click on correct answer it returns a display that it is a correct answer and it navigates to next question page-->
+               <a href="#" onclick="return correctanswer(8);">
+                    <div class= 's11'> </div>
+               </a>
+               <a href="#" onclick="return wronganswer();">
+                    <div class= 's12'></div>
+               </a>
+                  <!--div id for score which is displayed on every question page  -->
+               <div id='score-container'>
+               <!--button id for score and java script function is given to call the events present in it -->
+                    <button id="score" onclick="return scorefn();">SCORE</button>
+               </div>
+               <!--button id for "back" and navigation is given to go back to question2 of subtraction when we click on easy button  -->
+               <div id='Back'>
+                    <button id='back' onclick="return show('subeasy2','subeasy3');"> BACK </button>
+               </div>
+           </div>
   </div>
 
+  <!--div id for subeasy4 which is the name of the page of fourth question in easy level of subtraction -->
+  <div id='subeasy4' style="display: none;" >
+           <!--div id for background of question4 page -->
+          <div class='subquestion4bg'>
+               <!--div id's for all the images present in question4 page  -->
+               <div class='subone'></div>
+               <div class='minus'></div>
+               <div class='subzero'></div>
+               <div class='fish1'></div>
+               <div class='fish2'></div>
+               <div class='fish3'></div>
+               <div class='fish4'></div>
+               <!--when we click on correct answer it returns a display that it is a correct answer and it navigates to next question page-->
+               <a href="#" onclick="return correctanswer(9);">
+                   <div class='s13'></div>
+               </a>
+              <!--when we click on wrong answer it returns a display that it is a wrong answer -->
+              <a href="#" onclick="return wronganswer();">
+                   <div class='s14'></div>
+              </a>
+              <a href="#" onclick="return wronganswer()">
+                   <div class='s15'></div>
+              </a>
+              <a href="#" onclick="return wronganswer();">
+                   <div class='s16'></div>
+              </a>
+              <!--div id for score which is displayed on every question page  -->
+              <div id='score-container'>
+              <!--button id for score and java script function is given to call the events present in it -->
+                   <button id='score' onclick="return scorefn();">SCORE</button>
+              </div>
+              <!--button id for "back" and navigation is given to go back to question3 of subtraction when we click on easy button  -->
+              <div id='Back'>
+                   <button id='back' onclick="return show('subeasy3','subeasy4');"> BACK </button>
+              </div>
+          </div>
+  </div>
 
+  <!--div id for subeasy5 which is the name of the page of fifth question in easy level of subtraction -->
+  <div id='subeasy5' style="display: none;" >
+        <!--div id for background of question5 page -->
+        <div class='subquestion5bg'>
+              <!--div id's for all the images present in question5 page  -->
+              <div class='subeight'></div>
+              <div class='minus'></div>
+              <div class='subsix1'></div>
+              <div class='balloon1'></div>
+              <div class='balloon2'></div>
+              <div class='balloon3'></div>
+              <div class='balloon4'></div>
+              <!--when we click on wrong answer it returns a display that it is a wrong answer -->
+              <a href="#" onclick="return wronganswer();">
+                  <div class='s17'></div>
+              </a>
+              <!--when we click on correct answer it returns a display that it is a correct answer and it navigates to next page-->
+              <a href="#" onclick="return correctanswer(10);">
+                  <div class='s18'></div>
+              </a>
+              <a href="#" onclick="return wronganswer();">
+                  <div class='s19'></div>
+              </a>
+              <a href="#" onclick="return wronganswer();">
+                  <div class='s20'></div>
+              </a>
+              <!--div id for score which is displayed on every question page  -->
+              <div id='score-container'>
+              <!--button id for score and java script function is given to call the events present in it -->
+                  <button id='score' onclick="return scorefn();">SCORE</button>
+              </div>
+              <!--button id for "back" and navigation is given to go back to question4 of subtraction when we click on easy button  -->
+              <div id='Back'>
+                  <button id='back' onclick="return show('subeasy4','subeasy5');"> BACK </button>
+              </div>
+        </div>
+  </div>
+
+  <!--div id for addmedium1 which is the name of the page of first question in medium level of addition -->
+  <div id='addmedium1' style="display: none;" >
+       <!--div id for background of question1 page -->
+      <div class='addques1bg'>
+             <!--div id's for all the images present in question1 page  -->
+             <div class='addone1'></div>
+             <div class='add1'></div>
+             <div class='addzero1'></div>
+             <div class='add2'></div>
+             <div class='addfive2'></div>
+             <div class='balloon1'></div>
+             <div class='balloon2'></div>
+             <div class='balloon3'></div>
+             <div class='balloon4'></div>
+             <!--when we click on correct answer it returns a display that it is a correct answer and it navigates to next page-->
+             <a href="#" onclick="return correctanswer(11);">
+                   <div class='p1'></div>
+             </a>
+             <!--when we click on wrong answer it returns a display that it is a wrong answer -->
+             <a href="#" onclick="return wronganswer();">
+                  <div class='p2'></div>
+             </a>
+             <a href="#" onclick="return wronganswer();">
+                  <div class='p3'></div>
+             </a>
+             <a href="#" onclick="return wronganswer();">
+                  <div class='p4'></div>
+             </a>
+             <!--div id for score which is displayed on every question page  -->
+             <div id='score-container'>
+                  <!--button id for score and java script function is given to call the events present in it -->
+                  <button id='score' onclick="return scorefn();">SCORE</button>
+             </div>
+             <!--button id for "back" and navigation is given to go back to the levels page("adding") when we click on easy button  -->
+             <div id='Back'>
+                  <button id='back' onclick="return show('adding','addmedium1');"> BACK </button></div>
+             </div>
+      </div>
+  </div>
+  <!-- div id for addmedium2 which is the name of the page of second question in medium level of addition -->
+  <div id='addmedium2' style="display: none;" >
+      <!--div id for background of question2 page -->
+      <div class='addques2bg'>
+            <!--div id's for all the images present in question2 page  -->
+            <div class='addseven'></div>
+            <div class='add1'></div>
+            <div class='addone2'></div>
+            <div class='add2'></div>
+            <div class='addone4'></div>
+            <!--when we click on wrong answer it returns a display that it is a wrong answer -->
+            <a href="#" onclick="return wronganswer();">
+                 <div class='p5'></div>
+            </a>
+            <!--when we click on correct answer it returns a display that it is a correct answer and it navigates to next page-->
+            <a href="#" onclick="return correctanswer(12);">
+                 <div class='p6'></div>
+            </a>
+            <a href="#" onclick="return wronganswer();">
+                 <div class='p7'></div>
+            </a>
+            <a href="#" onclick="return wronganswer();">
+                 <div class='p8'></div>
+            </a>
+            <!--div id for score which is displayed on every question page  -->
+            <div id='score-container'>
+                 <!--button id for score and java script function is given to call the events present in it -->
+                 <button id='score' onclick="return scorefn();">SCORE</button>
+            </div>
+            <!--button id for "back" and navigation is given to go back to the question1 page when we click on easy button  -->
+            <div id='Back'>
+                 <button id='back' onclick="return show('addmedium1','addmedium2');"> BACK </button></div>
+            </div>
+      </div>
+  </div>
+
+ <!--div id for addmedium3 which is the name of the page of third question in medium level of addition -->
+ <div id='addmedium3' style="display: none;" >
+ <!--div id for background of question3 page -->
+      <div class='addques3bg'>
+            <!--div id's for all the images present in question3 page  -->
+            <div class='addtwo2'></div>
+            <div class='add1'></div>
+            <div class='addthree1'></div>
+            <div class='add2'></div>
+            <div class='addfour2'></div>
+            <div class='fish1'></div>
+            <div class='fish2'></div>
+            <div class='fish3'></div>
+            <div class='fish4'></div>
+            <!--when we click on wrong answer it returns a display that it is a wrong answer -->
+            <a href="#" onclick="return wronganswer();">
+                <div class='p9'></div>
+            </a>
+            <a href="#" onclick="return wronganswer();">
+                <div class='p10'></div>
+            </a>
+            <!--when we click on correct answer it returns a display that it is a correct answer and it navigates to next page-->
+            <a href="#" onclick="return correctanswer(13);">
+                <div class='p11'></div>
+            </a>
+            <a href="#" onclick="return wronganswer();">
+                <div class='p12'></div>
+            </a>
+            <!--div id for score which is displayed on every question page  -->
+            <div id='score-container'>
+              <!--button id for score and java script function is given to call the events present in it -->
+                <button id='score' onclick="return scorefn();">SCORE</button>
+            </div>
+            <!--button id for "back" and navigation is given to go back to the question2 page when we click on easy button  -->
+            <div id='Back'>
+                <button id='back' onclick="return show('addmedium2','addmedium3');"> BACK </button>
+            </div>
+      </div>
+ </div>
+
+<!--div id for addmedium4 which is the name of the page of fourth question in medium level of addition -->
+ <div id='addmedium4' style="display: none;" >
+      <!--div id for background of question4 page -->
+      <div class='addques4bg'>
+         <!--div id's for all the images present in question4 page  -->
+         <div class='addnine'></div>
+         <div class='add1'></div>
+         <div class='addzero4'></div>
+         <div class='add2'></div>
+         <div class='addzero2'></div>
+         <div class='star1'></div>
+         <div class='star2'></div>
+         <div class='star3'></div>
+         <div class='star4'></div>
+         <!--when we click on wrong answer it returns a display that it is a wrong answer -->
+         <a href="#" onclick="return wronganswer();">
+             <div class='p13'></div>
+         </a>
+         <!--when we click on correct answer it returns a display that it is a correct answer and it navigates to next page-->
+         <a href="#" onclick="return correctanswer(14);">
+             <div class='p14'></div>
+         </a>
+         <a href="#" onclick="return wronganswer();">
+             <div class='p15'></div>
+         </a>
+         <a href="#" onclick="return wronganswer();">
+             <div class='p16'></div>
+         </a>
+         <!--div id for score which is displayed on every question page  -->
+         <div id='score-container'>
+         <!--button id for score and java script function is given to call the events present in it -->
+             <button id='score' onclick="return scorefn();">SCORE</button>
+         </div>
+         <!--button id for "back" and navigation is given to go back to the question3 page when we click on easy button  -->
+         <div id='Back'>
+             <button id='back' onclick="return show('addmedium3','addmedium4');"> BACK </button>
+         </div>
+      </div>
+ </div>
+
+
+ <!--div id for addmedium5 which is the name of the page of fifth question in medium level of addition -->
+ <div id='addmedium5' style="display:none">
+      <!--div id for background of question5 page -->
+      <div class='addques5bg'>
+           <!--div id's for all the images present in question5 page  -->
+                <div class= "addsix1"></div>
+                <div class= "add1"></div>
+                <div class= "addthree2"></div>
+                <div class='add2'></div>
+                <div class='addone3'></div>
+                <div class='cloud1'></div>
+                <div class='cloud2'></div>
+                <div class='cloud3'></div>
+                <div class='cloud4'></div>
+                 <!--when we click on wrong answer it returns a display that it is a wrong answer -->
+                <a href="#" onclick="return wronganswer();">
+                    <div class= "p17"></div>
+                </a>
+                <a href="#" onclick="return wronganswer();">
+                    <div class= "p18"></div>
+                </a>
+                <!--when we click on correct answer it returns a display that it is a correct answer and it navigates to next page-->
+                <a href="#" onclick="return correctanswer(15);">
+                    <div class= "p19"> </div>
+                </a>
+                <a href="#" onclick="return wronganswer();">
+                    <div class= "p20"></div>
+                </a>
+                <!--div id for score which is displayed on every question page  -->
+                <div id='score-container'>
+                     <!--button id for score and java script function is given to call the events present in it -->
+                     <button id='score' onclick="return scorefn();">SCORE</button>
+                </div>
+                <!--button id for "back" and navigation is given to go back to the question4 page when we click on easy button  -->
+                <div id='Back'>
+                     <button id='back' onclick="return show('addmedium4','addmedium5');"> BACK </button>
+                </div>
+      </div>
+</div>
+
+<!--div id for submedium1 which is the name of the page of first question in medium level of subtraction -->
+<div id='submedium1' style="display: none;" >
+      <!--div id for background of question1 page -->
+      <div class='subques1bg'>
+                <!--div id's for all the images present in question1 page  -->
+                <div class='subten'></div>
+                <div class='sub1'></div>
+                <div class='subthree1'></div>
+                <div class='sub2'></div>
+                <div class='subone1'></div>
+                <div class='balloon1'></div>
+                <div class='balloon2'></div>
+                <div class='balloon3'></div>
+                <div class='balloon4'></div>
+                    <!--when we click on correct answer it returns a display that it is a correct answer and it navigates to next page-->
+                <a href="#" onclick="return correctanswer(16);">
+                    <div class='m1'></div>
+                </a>
+                   <!--when we click on wrong answer it returns a display that it is a wrong answer -->
+                <a href="#" onclick="return wronganswer();">
+                    <div class='m2'></div>
+                </a>
+                <a href="#" onclick="return wronganswer();">
+                    <div class='m3'></div>
+                </a>
+                <a href="#" onclick="return wronganswer();">
+                    <div class='m4'></div>
+                </a>
+                <!--div id for score which is displayed on every question page  -->
+                <div id='score-container'>
+                     <!--button id for score and java script function is given to call the events present in it -->
+                     <button id='score' onclick="return scorefn();">SCORE</button>
+                </div>
+                <!--button id for "back" and navigation is given to go back to the levels page("adding") when we click on easy button  -->
+                <div id='Back'>
+                     <button id='back' onclick="return show('adding','submedium1');"> BACK </button>
+                </div>
+      </div>
+</div>
+
+<!--div id for submedium2 which is the name of the page of second question in medium level of subtraction -->
+<div id='submedium2' style="display: none;" >
+      <!--div id for background of question2 page -->
+      <div class='subques2bg'>
+               <!--div id's for all the images present in question2 page  -->
+               <div class='subnine1'></div>
+               <div class='sub1'></div>
+               <div class='subfour1'></div>
+               <div class='sub2'></div>
+               <div class='subtwo'></div>
+               <!--when we click on wrong answer it returns a display that it is a wrong answer -->
+               <a href="#" onclick="return wronganswer();">
+                   <div class='m5'></div>
+               </a>
+               <!--when we click on correct answer it returns a display that it is a correct answer and it navigates to next page-->
+               <a href="#" onclick="return correctanswer(17);">
+                   <div class='m6'></div>
+               </a>
+               <a href="#" onclick="return wronganswer();">
+                   <div class='m7'></div>
+               </a>
+               <a href="#" onclick="return wronganswer();">
+                   <div class='m8'></div>
+               </a>
+               <!--div id for score which is displayed on every question page  -->
+               <div id='score-container'>
+                    <!--button id for score and java script function is given to call the events present in it -->
+                    <button id='score' onclick="return scorefn();">SCORE</button>
+               </div>
+               <!--button id for "back" and navigation is given to go back to the question1 page when we click on easy button  -->
+               <div id='Back'>
+                    <button id='back' onclick="return show('submedium1','submedium2');"> BACK </button>
+               </div>
+      </div>
+</div>
+
+<!--div id for submedium3 which is the name of the page of third question in medium level of subtraction -->
+<div id='submedium3' style="display: none;" >
+      <!--div id for background of question3 page -->
+      <div class='subques3bg'>
+               <!--div id's for all the images present in question3 page  -->
+               <div class='subfour2'></div>
+               <div class='sub1'></div>
+               <div class='subthree2'></div>
+               <div class='sub2'></div>
+               <div class='subzero1'></div>
+               <div class='fish1'></div>
+               <div class='fish2'></div>
+               <div class='fish3'></div>
+               <div class='fish4'></div>
+               <!--when we click on wrong answer it returns a display that it is a wrong answer -->
+               <a href="#" onclick="return wronganswer();">
+                    <div class='m9'></div>
+               </a>
+               <a href="#" onclick="return wronganswer();">
+                    <div class='m10'></div>
+               </a>
+                 <!--when we click on correct answer it returns a display that it is a correct answer and it navigates to next page-->
+               <a href="#" onclick="return correctanswer(18);">
+                    <div class='m11'></div>
+               </a>
+               <a href="#" onclick="return wronganswer();">
+                    <div class='m12'></div>
+               </a>
+               <!--div id for score which is displayed on every question page  -->
+               <div id='score-container'>
+                    <!--button id for score and java script function is given to call the events present in it -->
+                    <button id='score' onclick="return scorefn();">SCORE</button>
+               </div>
+               <!--button id for "back" and navigation is given to go back to the question2 page when we click on easy button  -->
+               <div id='Back'>
+                    <button id='back' onclick="return show('submedium2','submedium3');"> BACK </button>
+               </div>
+      </div>
+</div>
+
+
+<!--div id for submedium4 which is the name of the page of fourth question in medium level of subtraction -->
+<div id='submedium4' style="display: none;" >
+      <!--div id for background of question4 page -->
+      <div class='subques4bg'>
+            <!--div id's for all the images present in question4 page  -->
+            <div class='subeight1'></div>
+            <div class='sub1'></div>
+            <div class='subfive1'></div>
+            <div class='sub2'></div>
+            <div class='subtwo1'></div>
+            <div class='star1'></div>
+            <div class='star2'></div>
+            <div class='star3'></div>
+            <div class='star4'></div>
+               <!--when we click on wrong answer it returns a display that it is a wrong answer -->
+            <a href="#" onclick="return wronganswer();">
+                  <div class='m13'></div>
+            </a>
+               <!--when we click on correct answer it returns a display that it is a correct answer and it navigates to next page-->
+            <a href="#" onclick="return correctanswer(19);">
+                  <div class='m14'></div>
+            </a>
+            <a href="#" onclick="return wronganswer();">
+                  <div class='m15'></div>
+            </a>
+            <a href="#" onclick="return wronganswer();">
+                  <div class='m16'></div>
+            </a>
+            <!--div id for score which is displayed on every question page  -->
+            <div id='score-container'>
+                   <!--button id for score and java script function is given to call the events present in it -->
+                  <button id='score' onclick="return scorefn();">SCORE</button>
+            </div>
+          <!--button id for "back" and navigation is given to go back to the question3 page when we click on easy button  -->
+          <div id='Back'>
+                  <button id='back' onclick="return show('submedium3','submedium4');"> BACK </button>
+          </div>
+      </div>
+</div>
+
+<!--div id for submedium5 which is the name of the page of fifth question in medium level of subtraction -->
+<div id='submedium5' style="display:none">
+      <!--div id for background of question5 page -->
+      <div class='subques5bg'>
+                   <!--div id's for all the images present in question5 page  -->
+                   <div class= "subten1"></div>
+                   <div class= "sub1"></div>
+                   <div class= "subsix2"></div>
+                   <div class='sub2'></div>
+                   <div class='subone2'></div>
+                   <div class='cloud1'></div>
+                   <div class='cloud2'></div>
+                   <div class='cloud3'></div>
+                   <div class='cloud4'></div>
+                   <!--when we click on wrong answer it returns a display that it is a wrong answer -->
+                   <a href="#" onclick="return wronganswer();">
+                         <div class= "m17"></div>
+                   </a>
+                   <a href="#" onclick="return wronganswer();">
+                         <div class= "m18"></div>
+                   </a>
+                   <a href="#" onclick="return wronganswer();">
+                         <div class= "m19"> </div>
+                   </a>
+                    <!--when we click on correct answer it returns a display that it is a correct answer and it navigates to next page-->
+                   <a href="#" onclick="return correctanswer(20);">
+                         <div class= "m20"></div>
+                   </a>
+                   <!--div id for score which is displayed on every question page  -->
+                   <div id='score-container'>
+                        <!--button id for score and java script function is given to call the events present in it -->
+                        <button id='score' onclick="return scorefn();">SCORE</button>
+                   </div>
+                 <!--button id for "back" and navigation is given to go back to the question4 page when we click on easy button  -->
+                 <div id='Back'>
+                        <button id='back' onclick="return show('submedium4','submedium5');"> BACK </button>
+                 </div>
+      </div>
+</div>
+
+<!--div id for Final to display the final score on the page  -->
+<div id='Final' style="display: none;" >
+
+      <div class='Final'>
+      <!--button id for final score and reset  -->
+                <button id='finalscore' onclick="return scorefn();"> FINAL SCORE </button>
+                <button id='reset' onclick="return reset();"> RESET </button>
+      </div>
+
+</div>
 </body>
-
 </head>
 </html>

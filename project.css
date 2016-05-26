@@ -1,173 +1,199 @@
-#project {                  /*css */
-background-image: url('images/background1.jpg');
-width: 100%;
-height: 100%;
-/*position: fixed;*/
-background-repeat: no-repeat;
-background-size: cover;
-left: 0px;;
-right: 0px;
-z-index: -1;
+#name {
+   position:fixed;
+   bottom: 20px;
+   right: 50px;
+   width: 300px;
+   padding: 30px 30px;
+   color: white;
+   background-color: black;
+   border-radius: 40px;
+   font-size: 35px;
+   font-family:Comic Sans MS ;
+   font-variant: small-caps;
+   text-align: center;
+   text-shadow: 4px 4px 5px rgb(16, 16, 16);
+   font-weight: bold;
 }
-
-#playbg {                  /*css */
-background-image: url('images/play2.png');
-width: 100%;
-height: 100%;
-
-background-repeat: no-repeat;
-background-size: cover;
-
-z-index: -1;
+/*stylings for main page background*/
+#project {
+   background-image: url('images/background2.jpg');
+   width: 100%;
+   height: 100%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   z-index: -1;
 }
-
-
-
-
-
+/*stylings for second page background*/
+#playbg {
+   background-image: url('images/play2.png');
+   width: 100%;
+   height: 100%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   z-index: -1;
+}
+/*css for the text and background present in instructions page*/
+#instructions {
+  background-color: red;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  font-size: 40;
+  font-family: Comic Sans MS;
+  text-align: center;
+}
+/*To make the background images cover the whole screen*/
+body {
+   display: block;
+   margin: 0px;
+}
+/*stylings for audio present in settings page*/
+#audioCnt {
+   background-image: url('images/music.jpg');
+   width: 100%;
+   height: 100%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   z-index: -1;
+   padding-top: 200px;
+   text-align: center;
+  }
+/*css for the three buttons present on the main page*/
 #ctrls-container {
   text-align: center;
 }
-
+/*stylings for button 1*/
 #button1 {
- /* margin-left: 600px;
-   margin-top: 450px;        */
-   width: 84px;
-   height: 60px;
+   width: 90px;
+   height: 70px;
    background: red;
    color: white;
-   font-size:18px;
+   font-size:30px;
    font-weight:700;
    border-radius: 10px;
+   font-family: Comic Sans MS;
 
 }
+/*stylings for button 2*/
 #button2 {
- /* margin-left: -300px;
-   margin-top: 450px;        */
-   width: 84px;
-   height: 45px;
-   background: red;
-   color: white;
-   font-size:14px;
-   font-weight:700;
-   border-radius: 10px;
 
+  width: 120px;
+  height: 50px;
+  background: red;
+  color: white;
+  font-size:20px;
+  font-weight:700;
+  border-radius: 10px;
+  font-family: Comic Sans MS;
 }
-
+/*stylings for button 3*/
 #button3 {
-  /*margin-left: 350px;
-   margin-top: 450px;        */
-   width: 120px;
-   height: 45px;
-   background: red;
-   color: white;
-   font-size:14px;
-   font-weight:700;
-   border-radius: 10px;
-   
+
+  width: 200px;
+  height: 45px;
+  background: red;
+  color: white;
+  font-size:20px;
+  font-weight:700;
+  border-radius: 10px;
+  font-family: Comic Sans MS;
 }
 
-/*css*/
-.image {
-   position: relative;
-   width: 100%;
-}
-
+/*header section styling in main page*/
 h1 {
-   /*position: absolute;*/
-   color: blue;
-   padding-top: 200px;
-   text-align: center;
-   width: 100%;
-   font: bold 70px/70px Helvetica, Sans-Serif;
+  color: black;
+  padding-top: 300px;
+  text-align: center;
+  width: 100%;
+  font-family:Comic Sans MS;
+  font-size: 80;
+
 }
+/*css for adding image present in second page*/
+#styleadd {
 
-
- #styleadd {
-  
-  
-  left: 550px;
-  top: 350px;
+  left: 450px;
+  top: 300px;
   position: absolute;
-
 }
+/*css for subtracting image present in second page*/
 #stylesub {
 
- 
- left: 900px;
- top: 350px;
- position: absolute;
+  left: 800px;
+  top: 300px;
+  position: absolute;
+}
+/*stylings for easy button on third page*/
+#easy {
+  margin-left: 500px;
+  margin-top:100px;
+  width: 300px;
+  height: 120px;
+  background: #5f97b6;
+  color: white;
+  font-size:30px;
+  font-weight:700;
+  border-radius: 10px;
+  font-family: Comic Sans MS;
+}
+/*stylings for medium button on third page*/
+#medium {
+  margin-left: 500px;
+  margin-top: 150px;
+  width: 300px;
+  height: 100px;
+  background: #5f97b6;
+  color: white;
+  font-size: 30px;
+  font-weight:700;
+  border-radius: 10px;
+  font-family: Comic Sans MS;
 
 }
-
- #level1 {
-    margin-left: 770px;
-     margin-top:200px;        /*css*/
-     width: 300px;
-     height: 100px;
-     background: #5f97b6;
-     color: white;
-     font-size:30px;
-     font-weight:700;
-     border-radius: 10px;
-  }
-
-  #level2 {
-    margin-left: 770px;
-     margin-top: 150px;        /*css*/
-     width: 300px;
-     height: 100px;
-     background: #5f97b6;
-     color: white;
-     font-size: 30px;
-     font-weight:700;
-     border-radius: 10px;
-  }
-
-.qns1bg {
-    background-color: red;
-width: 100%;
-height: 100%;
-
-background-repeat: no-repeat;
-background-size: cover;
-
-z-index: -1;
+/*css for the background image of question 1 page of addition easy level*/
+.addquestion1bg {
+  background-image:url('images/page1.png');
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
 }
-
- .one {
-   background-image: url('images/one.png');
-   background-size: 128px 128px;
-   width: 120px;
-   height: 120px;
-   top: 100px;
-   left: 350px;
-   position:absolute;
- }
-
- .plus1 {
-   background-image: url('images/add.png');
-   background-size: 130px 130px;
-   width: 130px;
-   height: 130px;
-   top: 100px;
-   left: 530px;
-   position:absolute;
- }
-
-
- .two {
+/*stylings for the image of div addone*/
+.addone {
+  background-image: url('images/one.png');
+  background-size: 128px 128px;
+  width: 120px;
+  height: 120px;
+  top: 100px;
+  left: 300px;
+  position:absolute;
+}
+/*stylings for the image of div plus*/
+.plus {
+  background-image: url('images/add.png');
+  background-size: 120px 120px;
+  width: 120px;
+  height: 120px;
+  top: 100px;
+  left: 550px;
+  position:absolute;
+}
+/*stylings for the image of div addtwo*/
+.addtwo {
    background-image: url('images/two.png');
    background-size: 128px 128px;
    width: 120px;
    height: 120px;
    top: 100px;
-   left: 700px;
+   left: 800px;
    position:fixed;
- }
+}
 
-
-  .a1 {
+/*stylings for the image tag a1 and animations are applied*/
+.a1 {
     background-image: url('images/five.png');
     background-size: 128px 128px;
     width: 128px;
@@ -175,15 +201,14 @@ z-index: -1;
     animation-name: a1Moving;
     animation-duration: 4s;
     animation-iteration-count: infinite;
-   animation-timing-function: linear;
+    animation-timing-function: linear;
     position: fixed;
     bottom: 200px;
     top: 400px;
-    left:100px;
-
-  }
-
-  @keyframes a1Moving {
+    left:170px;
+}
+/*It is used to make animations work for the image*/
+@keyframes a1Moving {
     0% {
       top: 300px;
     }
@@ -191,388 +216,3154 @@ z-index: -1;
       bottom: 100vw;
     }
 
-
-  }
-
-
-
+}
+/*stylings for the image tag a2 and animations are applied*/
 .a2 {
-  background-image: url('images/nine.png');
-  background-size: 128px 128px;
-  width: 128px;
-  height: 128px;
-  animation-name: a2Moving;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
- animation-timing-function: linear;
-  position: fixed;
-  bottom: 200px;
-  top: 400px;
-  left:350px;
+    background-image: url('images/nine.png');
+    background-size: 128px 128px;
+    width: 128px;
+    height: 128px;
+    animation-name: a2Moving;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: fixed;
+    bottom: 200px;
+    top: 400px;
+    left:450px;
 
 }
-
+/*It is used to make animations work for the image*/
 @keyframes a2Moving {
-  0% {
-    bottom: 100vw;
-  }
-  100% {
-    top: 300px;
-  }
-
+    0% {
+      bottom: 100vw;
+    }
+    100% {
+      top: 300px;
+    }
 
 }
-
+/*stylings for the image tag a3 and animations are applied*/
 .a3 {
-  background-image: url('images/three.png');
-  background-size: 128px 128px;
-  width: 128px;
-  height: 128px;
-  animation-name: a3Moving;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
- animation-timing-function: linear;
-  position: fixed;
-  bottom: 200px;
-  top: 400px;
-  left:600px;
+    background-image: url('images/three.png');
+    background-size: 128px 128px;
+    width: 128px;
+    height: 128px;
+    animation-name: a3Moving;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: fixed;
+    bottom: 200px;
+    top: 400px;
+    left:700px;
 
 }
-
+/*It is used to make animations work for the image*/
 @keyframes a3Moving {
-  0% {
-    top: 300px;
-  }
-  100% {
-    bottom: 100vw;
-  }
+    0% {
+      top: 300px;
+    }
+    100% {
+      bottom: 100vw;
+    }
 
 }
+/*stylings for the image tag a4 and animations are applied*/
 .a4 {
-  background-image: url('images/six.png');
-  background-size: 128px 128px;
-  width: 128px;
-  height: 128px;
-  animation-name: a4Moving;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
- animation-timing-function: linear;
-  position: fixed;
-  bottom: 200px;
-  top: 400px;
-  left:850px;
+    background-image: url('images/six.png');
+    background-size: 128px 128px;
+    width: 128px;
+    height: 128px;
+    animation-name: a4Moving;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: fixed;
+    bottom: 200px;
+    top: 400px;
+    left:950px;
 
 }
-
+/*It is used to make animations work for the image*/
 @keyframes a4Moving {
-  0% {
-    bottom: 100vw;
-  }
-  100% {
+    0% {
+      bottom: 100vw;
+    }
+    100% {
+      top: 300px;
+    }
+}
+/*css for the background image present in question 2 page of addition easy level*/
+.addquestion2bg {
+    background-image:url('images/page2.png');
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+/*stylings for the image div id*/
+.addfour {
+    background-image: url('images/four4.png');
+    background-size: 160px 160px;
+    width: 160px;
+    height: 160px;
+    top: 75px;
+    left: 300px;
+    position:fixed;
+}
+/*stylings for the image div id*/
+.addfive {
+    background-image: url('images/five5.png');
+    background-size: 160px 160px;
+    width: 160px;
+    height: 160px;
+    top: 75px;
+    left: 750px;
+    position:fixed;
+}
+/*cloud1 is the div id given to the first cloud on question 2 page*/
+.cloud1 {
+    background-image: url('images/c1.png');
+    background-size: 140px 140px;
+    width: 140px;
+    height: 140px;
     top: 300px;
-  }
-}
-
-.qns2bg {
-   background-color: #509FDD;
-width: 100%;
-height: 100%;
-
-background-repeat: no-repeat;
-background-size: cover;
-
-z-index: -1;
-}
-
-.four {
-  background-image: url('images/four4.png');
-  background-size: 130px 130px;
-  width: 130px;
-  height: 130px;
-  top: 100px;
-  left: 350px;
-  position:fixed;
-}
-.plus2 {
-  background-image: url('images/add.png');
-  background-size: 100px 100px;
-  width: 100px;
-  height: 100px;
-  top: 110px;
-  left: 500px;
-  position:fixed;
-}
-
-.five {
-  background-image: url('images/five5.png');
-  background-size: 130px 130px;
-  width: 130px;
-  height: 130px;
-  top: 100px;
-  left: 600px;
-  position:fixed;
-}
-.c1 {
-  background-image: url('images/c1.png');
-  background-size: 140px 140px;
-  width: 140px;
-  height: 140px;
-  top: 300px;
-  left: 600px;
-  animation-name: c1Moving;
-  animation-duration: 8s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  position: fixed;
-  left: 100px;
-
-}
-
-@keyframes c1Moving {
-   0% {
+    left: 600px;
+    animation-name: cloud1Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
     left: 100px;
-  }
-  100% {
-    left: 400px;
-  }
 
 }
-
-
-.c2 {
-  background-image: url('images/c2.png');
-  background-size: 140px 140px;
-  width: 140px;
-  height: 140px;
-  top: 300px;
-  left: 600px;
-  position:fixed;
-  animation-name: c2Moving;
-  animation-duration: 8s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  left: 100px;
-
-}
-
-@keyframes c2Moving {
-    0% {
-      left: 80vw;
+/*It is used to make animations work for the image*/
+@keyframes cloud1Moving {
+     0% {
+      left: 100px;
     }
     100% {
-      left: 600px;
+      left: 450px;
     }
 }
 
+/*cloud2 is the div id given to the second cloud on question 2 page*/
+.cloud2 {
+    background-image: url('images/c2.png');
+    background-size: 140px 140px;
+    width: 140px;
+    height: 140px;
+    top: 300px;
+    left: 600px;
+    position:absolute;
+    animation-name: cloud2Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    left: 100px;
+}
 
-.c3 {
-  background-image: url('images/c3.png');
-  background-size: 140px 140px;
-  width: 140px;
-  height: 140px;
-  top: 440px;
-  left: 600px;
-  position:fixed;
-  animation-name: c3Moving;
-  animation-duration: 8s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  left: 100px;
+@keyframes cloud2Moving {
+      0% {
+        left: 80vw;
+      }
+      100% {
+        left: 650px;
+      }
+}
+
+/*cloud3 is the div id given to the third cloud on question 2 page*/
+.cloud3 {
+    background-image: url('images/c3.png');
+    background-size: 140px 140px;
+    width: 140px;
+    height: 140px;
+    top: 440px;
+    left: 600px;
+    position:absolute;
+    animation-name: cloud3Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    left: 100px;
+
+  }
+
+@keyframes cloud3Moving {
+      0% {
+        left: 80vw;
+      }
+      100% {
+        left: 650px;
+      }
+}
+/*cloud4 is the div id given to the fourth cloud on question 2 page*/
+.cloud4 {
+    background-image: url('images/c4.png');
+    background-size: 140px 140px;
+    width: 140px;
+    height: 140px;
+    top: 440px;
+    left: 200px;
+    position:absolute;
+    animation-name: cloud4Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    left: 100px;
 
 }
 
-@keyframes c3Moving {
-    0% {
-      left: 80vw;
+@keyframes cloud4Moving {
+     0% {
+      left: 100px;
     }
     100% {
-      left: 600px;
+      left: 450px;
     }
-}
-
-.c4 {
-  background-image: url('images/c4.png');
-  background-size: 140px 140px;
-  width: 140px;
-  height: 140px;
-  top: 440px;
-  left: 200px;
-  position:fixed;
-  animation-name: c4Moving;
-  animation-duration: 8s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  left: 100px;
 
 }
-
-@keyframes c4Moving {
-   0% {
-    left: 100px;
-  }
-  100% {
-    left: 400px;
-  }
-
-}
-
-
+/*stylings for the image tag a5 and animations are applied*/
 .a5 {
-  background-image: url('images/two2.png');
-  background-size: 120px 120px;
-  width: 120px;
-  height: 120px;
-  top: 310px;
-  left: 610px;
-  position:absolute;
-  animation-name: a5Moving;
-  animation-duration: 8s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  left: 100px;
-
-  }
-
-  @keyframes a5Moving {
-  0% {
+    background-image: url('images/two2.png');
+    background-size: 120px 120px;
+    width: 120px;
+    height: 120px;
+    top: 310px;
+    left: 610px;
+    position:absolute;
+    animation-name: a5Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
     left: 100px;
-  }
-  100% {
-    left: 400px;
-  }
-  }
 
+}
+
+@keyframes a5Moving {
+    0% {
+      left: 100px;
+    }
+    100% {
+      left: 450px;
+    }
+}
+/*stylings for the image tag a6 and animations are applied*/
 .a6 {
-  background-image: url('images/eight8.png');
-  background-size: 120px 120px;
-  width: 120px;
-  height: 120px;
-  top: 310px;
-  left: 610px;
-  position:fixed;
-  animation-name: a6Moving;
-  animation-duration: 8s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  left: 100px;
-
+    background-image: url('images/eight8.png');
+    background-size: 120px 120px;
+    width: 120px;
+    height: 120px;
+    top: 310px;
+    left: 610px;
+    position:fixed;
+    animation-name: a6Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    left: 100px;
 }
 
 @keyframes a6Moving {
-    0% {
-      left: 80vw;
-    }
-    100% {
-      left: 600px;
-    }
+      0% {
+        left: 80vw;
+      }
+      100% {
+        left: 650px;
+      }
 }
-
+/*stylings for the image tag a7 and animations are applied*/
 .a7 {
-  background-image: url('images/five5.png');
-  background-size: 120px 120px;
-  width: 120px;
-  height: 120px;
-  top: 450px;
-  left: 610px;
-  position:fixed;
-  animation-name: a7Moving;
-  animation-duration: 8s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  left: 100px;
+    background-image: url('images/five5.png');
+    background-size: 120px 120px;
+    width: 120px;
+    height: 120px;
+    top: 450px;
+    left: 610px;
+    position:fixed;
+    animation-name: a7Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    left: 100px;
 
 }
 
 @keyframes a7Moving {
-    0% {
-      left: 80vw;
+     0% {
+        left: 80vw;
+      }
+      100% {
+        left: 650px;
+      }
+}
+/*stylings for the image tag a8 and animations are applied*/
+.a8 {
+    background-image: url('images/nine9.png');
+    background-size: 120px 120px;
+    width: 120px;
+    height: 120px;
+    top: 450px;
+    left: 250px;
+    position:absolute;
+    animation-name: a8Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    left: 100px;
+
+}
+
+@keyframes a8Moving {
+     0% {
+      left: 100px;
     }
     100% {
+      left: 450px;
+    }
+
+}
+/*css stylings for the div id score*/
+#score {
+     width: 84px;
+     height: 45px;
+     background: black;
+     color: white;
+     font-size:14px;
+     font-weight:700;
+     border-radius: 10px;
+     font-family:Comic Sans MS;
+
+}
+/*css stylings for the div id final score which is present on the final page*/
+  #finalscore {
+     width: 84px;
+     height: 45px;
+     background: black;
+     color: white;
+     font-size:14px;
+     font-weight:700;
+     border-radius: 10px;
+     font-family:Comic Sans MS;
+     top: 200px;
+     left: 640px;
+     position:absolute;
+
+}
+/*css stylings for the div id score which is present on every page of questions*/
+  #score-container {
+     text-align: right;
+}
+/*stylings for the image tag of background image present on question 3 page of addition easy level*/
+.addquestion3bg {
+  background-image: url('images/sky.png');
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+/*stylings for the image tag*/
+.addtwo1 {
+    background-image: url('images/two.png');
+    background-size: 120px 120px;
+    width: 120px;
+    height: 120px;
+    top: 100px;
+    left: 250px;
+    position:fixed;
+}
+/*stylings for the image tag*/
+.addfive1{
+    background-image: url('images/five.png');
+    background-size: 120px 120px;
+    width: 120px;
+    height: 120px;
+    top: 100px;
+    left: 850px;
+    position:fixed;
+}
+/*balloon1 is the name of the image of first balloon present on question page 3 */
+.balloon1 {
+    background-image: url('images/balloon1.png');
+    background-size: 150px 150px;
+    width: 150px;
+    height: 150px;
+    animation-name: balloon1Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: fixed;
+    bottom: 200px;
+    top: 400px;
+    left:100px;
+
+}
+
+@keyframes balloon1Moving {
+     0% {
+    bottom: 10vw;
+    }
+    100% {
+      top: -10px;
+    }
+
+}
+
+/*balloon2 is the name of the image of second balloon present on question page 3 */
+
+.balloon2 {
+    background-image: url('images/balloon2.png');
+    background-size: 150px 150px;
+    width: 150px;
+    height: 150px;
+    position:fixed;
+    animation-name: balloon2Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    bottom: 200px;
+    top: 400px;
+    left:380px;
+}
+
+@keyframes balloon2Moving {
+    0% {
+      bottom: 10vw;
+    }
+    100% {
+      top: -10px;
+    }
+
+}
+
+/*balloon3 is the name of the image of third balloon present on question page 3 */
+.balloon3 {
+    background-image: url('images/balloon3.png');
+    background-size: 150px 150px;
+    width: 150px;
+    height: 150px;
+    position:fixed;
+    animation-name: balloon3Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    bottom: 200px;
+    top: 400px;
+    left:680px;
+  }
+
+  @keyframes balloon3Moving {
+     0% {
+     bottom: 80vw;
+    }
+     100% {
+    top: -10px;
+  }
+
+}
+/*balloon4 is the name of the image of fourth balloon present on question page 3 */
+.balloon4 {
+    background-image: url('images/balloon4.png');
+    background-size: 150px 150px;
+    width: 150px;
+    height: 150px;
+    position:fixed;
+    animation-name: balloon4Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    bottom: 200px;
+    top: 400px;
+    left:1000px;
+}
+
+  @keyframes balloon4Moving {
+    0% {
+   bottom: 80vw;
+   }
+   100% {
+     top: -10px;
+   }
+}
+/*stylings for the image tag a9 and animations are applied*/
+.a9 {
+    background-image: url('images/seven.png');
+    background-size: 90px 90px;
+    width: 90px;
+    height: 90px;
+    position:absolute;
+    animation-name: a9Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    bottom: 200px;
+    top: 420px;
+    left:120px;
+
+}
+
+@keyframes a9Moving {
+     0% {
+    bottom: 10vw;
+    }
+    100% {
+      top: 10px;
+    }
+
+}
+/*stylings for the image tag a10 and animations are applied*/
+.a10 {
+    background-image: url('images/nine.png');
+    background-size: 90px 90px;
+    width: 90px;
+    height: 90px;
+    position:fixed;
+    animation-name: a10Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    bottom: 200px;
+    top: 420px;
+    left:400px;
+}
+
+@keyframes a10Moving {
+    0% {
+      bottom: 10vw;
+    }
+    100% {
+      top: 10px;
+    }
+
+}
+/*stylings for the image tag a11 and animations are applied*/
+.a11 {
+    background-image: url('images/four.png');
+    background-size: 90px 90px;
+    width: 90px;
+    height: 90px;
+    position:fixed;
+    animation-name: a11Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    bottom: 200px;
+    top: 420px;
+    left:710px;
+}
+
+@keyframes a11Moving {
+     0% {
+     bottom: 80vw;
+    }
+     100% {
+    top: 10px;
+  }
+}
+
+/*stylings for the image tag a12 and animations are applied*/
+.a12 {
+    background-image: url('images/one.png');
+    background-size: 90px 90px;
+    width: 90px;
+    height: 90px;
+    position:absolute;
+    animation-name: a12Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
+    bottom: 200px;
+    top: 420px;
+    left:1020px;
+  }
+
+@keyframes a12Moving {
+    0% {
+   bottom: 80vw;
+   }
+   100% {
+     top: 10px;
+   }
+}
+/*stylings for the background image present on question page 4 of addition easy level*/
+.addquestion4bg {
+  background-image:url('images/moon.jpg');
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+/*stylings for the image tag*/
+.addsix1 {
+    background-image: url('images/six6.png');
+    background-size: 130px 130px;
+    width: 130px;
+    height: 130px;
+    top: 100px;
+    left: 300px;
+    position:fixed;
+}
+/*stylings for the image tag*/
+.addfour1{
+    background-image: url('images/four4.png');
+    background-size: 130px 130px;
+    width: 130px;
+    height: 130px;
+    top: 100px;
+    left: 700px;
+    position:fixed;
+}
+/*star 1 is the name given to the first star present on question page 4*/
+  .star1 {
+    background-image: url('images/star1.png');
+    background-size: 160px 160px;
+    width: 160px;
+    height: 160px;
+    animation-name: star1Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: fixed;
+    bottom: 200px;
+    top: 410px;
+    left:150px;
+}
+
+@keyframes star1Moving {
+     0% {
+      top: 300px;
+    }
+    100% {
+      bottom: 100vw;
+    }
+
+}
+/*star 2 is the name given to the second star present on question page 4*/
+  .star2 {
+    background-image: url('images/star2.png');
+    background-size: 160px 160px;
+    width: 160px;
+    height: 160px;
+    position:fixed;
+    animation-name: star2Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    bottom: 200px;
+    top: 410px;
+    left:450px;
+}
+
+@keyframes star2Moving {
+    0% {
+      bottom: 100vw;
+    }
+    100% {
+      top: 300px;
+    }
+
+}
+/*star 3 is the name given to the third star present on question page 4*/
+.star3 {
+    background-image: url('images/star3.png');
+    background-size: 160px 160px;
+    width: 160px;
+    height: 160px;
+    position:fixed;
+    animation-name: star3Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    bottom: 200px;
+    top: 410px;
+    left:700px;
+  }
+
+@keyframes star3Moving {
+     0% {
+     top: 300px;
+    }
+     100% {
+    bottom: 100vw;
+  }
+}
+/*star 4 is the name given to the fourth star present on question page 4*/
+.star4 {
+    background-image: url('images/star4.png');
+    background-size: 160px 160px;
+    width: 160px;
+    height: 160px;
+    position:fixed;
+    animation-name: star4Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    bottom: 200px;
+    top: 410px;
+    left:950px;
+}
+
+@keyframes star4Moving {
+    0% {
+      bottom: 100vw;
+    }
+    100% {
+      top: 300px;
+    }
+}
+/*stylings for the image tag a13 and animations are applied*/
+.a13 {
+    background-image: url('images/eight8.png');
+    background-size: 120px 120px;
+    width: 120px;
+    height: 120px;
+    position:absolute;
+    animation-name: a13Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    bottom: 200px;
+    top: 430px;
+    left:160px;
+
+}
+
+@keyframes a13Moving {
+     0% {
+      top: 320px;
+    }
+    100% {
+      bottom: 100vw;
+    }
+
+}
+/*stylings for the image tag a14 and animations are applied*/
+.a14 {
+    background-image: url('images/ten10.png');
+    background-size: 120px 120px;
+    width: 120px;
+    height: 120px;
+    position:fixed;
+    animation-name: a14Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    bottom: 200px;
+    top: 430px;
+    left:460px;
+}
+
+  @keyframes a14Moving {
+    0% {
+      bottom: 100vw;
+    }
+    100% {
+      top: 320px;
+}
+
+}
+/*stylings for the image tag a15 and animations are applied*/
+.a15 {
+    background-image: url('images/three3.png');
+    background-size: 120px 120px;
+    width: 120px;
+    height: 120px;
+    position:fixed;
+    animation-name: a15Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    bottom: 200px;
+    top: 440px;
+    left:710px;
+
+}
+
+@keyframes a15Moving {
+      0% {
+        top: 310px;
+      }
+      100% {
+        bottom: 100vw;
+      }
+}
+/*stylings for the image tag a16 and animations are applied*/
+.a16 {
+    background-image: url('images/two2.png');
+    background-size: 120px 120px;
+    width: 120px;
+    height: 120px;
+    position:absolute;
+    animation-name: a16Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
+    bottom: 200px;
+    top: 430px;
+    left:960px;
+}
+
+@keyframes a16Moving {
+  0% {
+    bottom: 100vw;
+  }
+  100% {
+    top: 320px;
+  }
+}
+/*stylings for the background image present on question page 5 of addition easy level*/
+.addquestion5bg {
+  background-image:url('images/sea.jpg');;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+/*stylings for the image tag*/
+.addthree {
+    background-image: url('images/three.png');
+    background-size: 120px 120px;
+    width: 120px;
+    height: 120px;
+    top: 80px;
+    left: 300px;
+    position:fixed;
+}
+/*stylings for the image tag*/
+.addzero{
+    background-image: url('images/zero.png');
+    background-size: 120px 120px;
+    width: 120px;
+    height: 120px;
+    top: 80px;
+    left: 800px;
+    position:fixed;
+}
+/*fish 1 is the name given to the first fish present on question 5 page*/
+.fish1 {
+    background-image: url('images/fish1.png');
+    background-size: 120px 120px;
+    width: 120px;
+    height: 120px;
+    position:absolute;
+    animation-name: fish1Moving;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    left: -128px;
+    top: 200px;
+}
+
+@keyframes fish1Moving {
+    0% {
+      left: -128px;
+    }
+    100% {
+      left: 100vw;
+    }
+}
+/*fish 2 is the name given to the second fish present on question 5 page*/
+.fish2 {
+    background-image: url('images/fish2.png');
+    background-size: 120px 120px;
+    width: 120px;
+    height: 120px;
+    position:absolute;
+    animation-name: fish2Moving;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    top: 300px;
+    left: 100vw;
+}
+
+  @keyframes fish2Moving {
+    0% {
+      left: 100vw;
+    }
+    100% {
+      left: -128px;
+    }
+  }
+  /*fish 3 is the name given to the third fish present on question 5 page*/
+.fish3 {
+    background-image: url('images/fish1.png');
+    background-size: 120px 120px;
+    width: 120px;
+    height: 120px;
+    position:absolute;
+    animation-name: fish3Moving;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    left: -128px;
+    top:400px;
+}
+
+    @keyframes fish3Moving {
+      0% {
+        left: -128px;
+      }
+      100% {
+        left: 100vw;
+      }
+}
+/*fish 4 is the name given to the fourth fish present on question 5 page*/
+.fish4 {
+      background-image: url('images/fish2.png');
+      background-size: 120px 120px;
+      width: 120px;
+      height: 120px;
+      position:absolute;
+      animation-name: fish4Moving;
+      animation-duration: 12s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      top: 500px;
+      left: 100vw;
+}
+
+    @keyframes fish4Moving {
+      0% {
+        left: 100vw;
+      }
+      100% {
+        left: -128px;
+      }
+}
+/*stylings for the image tag a17 and animations are applied*/
+.a17 {
+    background-image: url('images/six.png');
+    background-size: 80px 80px;
+    width: 80px;
+    height: 80px;
+    animation-name: a17Moving;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: fixed;
+    bottom: 200px;
+    top: 400px;
+    left:170px;
+}
+
+@keyframes a17Moving {
+    0% {
+      top: 300px;
+    }
+    100% {
+      bottom: 100vw;
+    }
+
+}
+/*stylings for the image tag a18 and animations are applied*/
+.a18 {
+    background-image: url('images/nine.png');
+    background-size: 80px 80px;
+    width: 80px;
+    height: 80px;
+    animation-name: a18Moving;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: fixed;
+    bottom: 200px;
+    top: 400px;
+    left:450px;
+
+}
+
+@keyframes a18Moving {
+    0% {
+      bottom: 100vw;
+    }
+    100% {
+      top: 300px;
+    }
+
+}
+/*stylings for the image tag a19 and animations are applied*/
+.a19 {
+    background-image: url('images/three.png');
+    background-size: 80px 80px;
+    width: 80px;
+    height: 80px;
+    animation-name: a19Moving;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: fixed;
+    bottom: 200px;
+    top: 400px;
+    left:700px;
+
+}
+
+@keyframes a19Moving {
+    0% {
+      top: 300px;
+    }
+    100% {
+      bottom: 100vw;
+    }
+
+}
+/*stylings for the image tag a20 and animations are applied*/
+.a20 {
+    background-image: url('images/one.png');
+    background-size: 80px 80px;
+    width: 80px;
+    height: 80px;
+    animation-name: a20Moving;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: fixed;
+    bottom: 200px;
+    top: 400px;
+    left:950px;
+
+}
+
+@keyframes a20Moving {
+    0% {
+      bottom: 100vw;
+    }
+    100% {
+      top: 300px;
+    }
+}
+/*stylings for the final id which is used to display final score*/
+.Final {
+  background-color:#c33737;;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+/*stylings for the background image present on the question page 1 of subtraction easy level*/
+.subquestion1bg {
+  background-image:url('images/moon.jpg');
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+
+}
+/*stylings for the image tag*/
+.subsix {
+    background-image: url('images/six.png');
+    background-size: 130px 130px;
+    width: 130px;
+    height: 130px;
+    top: 100px;
+    left: 300px;
+    position:fixed;
+}
+/*stylings for the image tag*/
+.minus {
+    background-image: url('images/sub.png');
+    background-size: 100px 100px;
+    width: 100px;
+    height: 100px;
+    top: 110px;
+    left: 550px;
+    position:fixed;
+}
+/*stylings for the image tag*/
+.subfive{
+    background-image: url('images/five.png');
+    background-size: 130px 130px;
+    width: 130px;
+    height: 130px;
+    top: 100px;
+    left: 800px;
+    position:fixed;
+}
+/*stylings for the image tag a1 and animations are applied*/
+.s1 {
+    background-image: url('images/eight.png');
+    background-size: 90px 90px;
+    width: 90px;
+    height: 90px;
+    position:absolute;
+    animation-name: s1Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    bottom: 200px;
+    top: 440px;
+    left:180px;
+}
+
+@keyframes s1Moving {
+     0% {
+      top: 330px;
+    }
+    100% {
+      bottom: 100vw;
+    }
+
+}
+/*stylings for the image tag s2 and animations are applied*/
+.s2 {
+    background-image: url('images/two.png');
+    background-size: 90px 90px;
+    width: 90px;
+    height: 90px;
+    position:fixed;
+    animation-name: s2Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    bottom: 200px;
+    top: 450px;
+    left:480px;
+}
+
+@keyframes s2Moving {
+    0% {
+      bottom: 100vw;
+    }
+    100% {
+      top: 330px;
+    }
+
+}
+/*stylings for the image tag s3 and animations are applied*/
+.s3 {
+    background-image: url('images/four.png');
+    background-size: 90px 90px;
+    width: 90px;
+    height: 90px;
+    position:fixed;
+    animation-name: s3Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    bottom: 200px;
+    top: 450px;
+    left:730px;
+}
+
+@keyframes s3Moving {
+      0% {
+        top: 320px;
+      }
+      100% {
+        bottom: 110vw;
+      }
+}
+/*stylings for the image tag s4 and animations are applied*/
+.s4 {
+    background-image: url('images/one.png');
+    background-size: 90px 90px;
+    width: 90px;
+    height: 90px;
+    position:absolute;
+    animation-name: s4Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
+    bottom: 200px;
+    top: 440px;
+    left:980px;
+
+}
+
+@keyframes s4Moving {
+  0% {
+    bottom: 100vw;
+  }
+  100% {
+    top: 330px;
+  }
+}
+/*stylings for the background image present on the question page 2 of subtraction easy level*/
+.subquestion2bg {
+  background-image: url('images/page1.png');
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+/*stylings for the image tag*/
+.subnine {
+     background-image: url('images/nine9.png');
+     background-size: 128px 128px;
+     width: 120px;
+     height: 120px;
+     top: 100px;
+     left: 300px;
+     position:absolute;
+}
+/*stylings for the image tag*/
+.subthree {
+     background-image: url('images/three3.png');
+     background-size: 128px 128px;
+     width: 120px;
+     height: 120px;
+     top: 100px;
+     left: 800px;
+     position:fixed;
+  }
+/*stylings for the image tag s5 and animations are applied*/
+.s5 {
+      background-image: url('images/six6.png');
+      background-size: 128px 128px;
+      width: 128px;
+      height: 128px;
+      animation-name: s5Moving;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      position: fixed;
+      bottom: 200px;
+      top: 400px;
+      left:170px;
+
+}
+
+@keyframes s5Moving {
+      0% {
+        top: 300px;
+      }
+      100% {
+        bottom: 100vw;
+      }
+}
+/*stylings for the image tag s6 and animations are applied*/
+.s6 {
+    background-image: url('images/eight8.png');
+    background-size: 128px 128px;
+    width: 128px;
+    height: 128px;
+    animation-name: s6Moving;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
+    bottom: 200px;
+    top: 400px;
+    left:450px;
+
+}
+
+@keyframes s6Moving {
+    0% {
+      bottom: 100vw;
+    }
+    100% {
+      top: 300px;
+    }
+
+}
+/*stylings for the image tag s7 and animations are applied*/
+.s7 {
+   background-image: url('images/one1.png');
+    background-size: 128px 128px;
+    width: 128px;
+    height: 128px;
+    animation-name: s7Moving;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: fixed;
+    bottom: 200px;
+    top: 400px;
+    left:700px;
+
+}
+
+@keyframes s7Moving {
+    0% {
+      top: 300px;
+    }
+    100% {
+      bottom: 100vw;
+    }
+
+}
+/*stylings for the image tag s8 and animations are applied*/
+.s8 {
+    background-image: url('images/five5.png');
+    background-size: 128px 128px;
+    width: 128px;
+    height: 128px;
+    animation-name: s8Moving;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
+    bottom: 200px;
+    top: 400px;
+    left:950px;
+
+}
+
+@keyframes s8Moving {
+    0% {
+      bottom: 100vw;
+    }
+    100% {
+      top: 300px;
+    }
+}
+/*stylings for the background image present on the question page 3 of subtraction easy level*/
+.subquestion3bg {
+  background-image:url('images/page2.png');
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+
+}
+/*stylings for image tag*/
+.subseven {
+    background-image: url('images/seven7.png');
+    background-size: 130px 130px;
+    width: 130px;
+    height: 130px;
+    top: 100px;
+    left: 300px;
+    position:fixed;
+}
+
+/*stylings for image tag*/
+.subfour{
+    background-image: url('images/four4.png');
+    background-size: 130px 130px;
+    width: 130px;
+    height: 130px;
+    top: 100px;
+    left: 800px;
+    position:fixed;
+}
+/*stylings for the image tag s9 and animations are applied*/
+.s9 {
+    background-image: url('images/two2.png');
+    background-size: 120px 120px;
+    width: 120px;
+    height: 120px;
+    top: 310px;
+    left: 610px;
+    position:absolute;
+    animation-name: s9Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    left: 100px;
+
+  }
+
+@keyframes s9Moving {
+    0% {
+      left: 100px;
+    }
+    100% {
+      left: 450px;
+    }
+}
+/*stylings for the image tag s10 and animations are applied*/
+.s10 {
+    background-image: url('images/six6.png');
+    background-size: 120px 120px;
+    width: 120px;
+    height: 120px;
+    top: 310px;
+    left: 610px;
+    position:fixed;
+    animation-name: s10Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    left: 100px;
+
+}
+
+@keyframes s10Moving {
+      0% {
+        left: 80vw;
+      }
+      100% {
+        left: 650px;
+      }
+}
+/*stylings for the image tag s11 and animations are applied*/
+.s11 {
+    background-image: url('images/three3.png');
+    background-size: 120px 120px;
+    width: 120px;
+    height: 120px;
+    top: 450px;
+    left: 610px;
+    position:fixed;
+    animation-name: s11Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    left: 100px;
+
+}
+
+@keyframes s11Moving {
+      0% {
+        left: 80vw;
+      }
+      100% {
+        left: 650px;
+      }
+}
+/*stylings for the image tag s12 and animations are applied*/
+.s12 {
+    background-image: url('images/five5.png');
+    background-size: 120px 120px;
+    width: 120px;
+    height: 120px;
+    top: 450px;
+    left: 250px;
+    position:absolute;
+    animation-name: s12Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    left: 100px;
+
+}
+
+  @keyframes s12Moving {
+     0% {
+      left: 100px;
+    }
+    100% {
+      left: 450px;
+    }
+}
+/*stylings for the background image present on the question page 4 of subtraction easy level*/
+.subquestion4bg {
+  background-image:url('images/sea.jpg');
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+/*stylings for the image tag*/
+.subone {
+    background-image: url('images/one1.png');
+    background-size: 130px 130px;
+    width: 130px;
+    height: 130px;
+    top: 100px;
+    left: 350px;
+    position:fixed;
+}
+/*stylings for the image tag*/
+.subzero{
+    background-image: url('images/zero0.png');
+    background-size: 130px 130px;
+    width: 130px;
+    height: 130px;
+    top: 100px;
+    left: 600px;
+    position:fixed;
+}
+/*stylings for the image tag s13 and animations are applied*/
+.s13 {
+    background-image: url('images/one1.png');
+    background-size: 80px 80px;
+    width: 80px;
+    height: 80px;
+    animation-name: s13Moving;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: fixed;
+    bottom: 200px;
+    top: 400px;
+    left:170px;
+}
+
+@keyframes s13Moving {
+    0% {
+      top: 300px;
+    }
+    100% {
+      bottom: 100vw;
+    }
+
+}
+/*stylings for the image tag s14 and animations are applied*/
+.s14 {
+    background-image: url('images/nine9.png');
+    background-size: 80px 80px;
+    width: 80px;
+    height: 80px;
+    animation-name: s14Moving;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: fixed;
+    bottom: 200px;
+    top: 400px;
+    left:450px;
+
+}
+
+@keyframes s14Moving {
+    0% {
+      bottom: 100vw;
+    }
+    100% {
+      top: 300px;
+    }
+
+}
+/*stylings for the image tag s15 and animations are applied*/
+.s15 {
+    background-image: url('images/four4.png');
+    background-size: 80px 80px;
+    width: 80px;
+    height: 80px;
+    animation-name: s15Moving;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: fixed;
+    bottom: 200px;
+    top: 400px;
+    left:700px;
+
+}
+
+@keyframes s15Moving {
+    0% {
+      top: 300px;
+    }
+    100% {
+      bottom: 100vw;
+    }
+
+}
+/*stylings for the image tag s16 and animations are applied*/
+.s16 {
+    background-image: url('images/ten10.png');
+    background-size: 80px 80px;
+    width: 80px;
+    height: 80px;
+    animation-name: s16Moving;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: fixed;
+    bottom: 200px;
+    top: 400px;
+    left:950px;
+
+}
+
+@keyframes s16Moving {
+    0% {
+      bottom: 100vw;
+    }
+    100% {
+      top: 300px;
+    }
+}
+/*stylings for the background image present on the question page 5 of subtraction easy level*/
+.subquestion5bg {
+  background-image:url('images/sky.png');
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+/*stylings for the image tag*/
+.subeight{
+    background-image: url('images/eight8.png');
+    background-size: 130px 130px;
+    width: 130px;
+    height: 130px;
+    top: 100px;
+    left: 280px;
+    position:fixed;
+}
+/*stylings for the image tag*/
+.subsix1{
+    background-image: url('images/six6.png');
+    background-size: 130px 130px;
+    width: 130px;
+    height: 130px;
+    top: 100px;
+    left: 800px;
+    position:fixed;
+}
+
+/*stylings for the image tag s17 and animations are applied*/
+.s17 {
+    background-image: url('images/six6.png');
+    background-size: 90px 90px;
+    width: 90px;
+    height: 90px;
+    position:absolute;
+    animation-name: s17Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    bottom: 200px;
+    top: 420px;
+    left:120px;
+
+}
+
+@keyframes s17Moving {
+     0% {
+    bottom: 10vw;
+    }
+    100% {
+      top: 10px;
+    }
+
+}
+/*stylings for the image tag s18 and animations are applied*/
+.s18 {
+    background-image: url('images/two2.png');
+    background-size: 90px 90px;
+    width: 90px;
+    height: 90px;
+    position:fixed;
+    animation-name: s18Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    bottom: 200px;
+    top: 420px;
+    left:400px;
+}
+
+  @keyframes s18Moving {
+    0% {
+      bottom: 10vw;
+    }
+    100% {
+      top: 10px;
+    }
+}
+/*stylings for the image tag s19 and animations are applied*/
+.s19 {
+    background-image: url('images/ten10.png');
+    background-size: 90px 90px;
+    width: 90px;
+    height: 90px;
+    position:fixed;
+    animation-name: s19Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    bottom: 200px;
+    top: 420px;
+    left:710px;
+}
+
+@keyframes s19Moving {
+     0% {
+     bottom: 80vw;
+    }
+     100% {
+    top: 10px;
+  }
+}
+/*stylings for the image tag s20 and animations are applied*/
+.s20 {
+    background-image: url('images/nine9.png');
+    background-size: 90px 90px;
+    width: 90px;
+    height: 90px;
+    position:absolute;
+    animation-name: s20Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
+    bottom: 200px;
+    top: 420px;
+    left:1020px;
+  }
+
+@keyframes s20Moving {
+    0% {
+   bottom: 80vw;
+   }
+   100% {
+     top: 10px;
+   }
+
+}
+/*stylings for the background image present on the question page 1 of addition medium level*/
+.addques1bg {
+  background-image: url('images/sky.png');
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+/*stylings for the image tag*/
+.addone1 {
+    background-image: url('images/one1.png');
+    background-size: 130px 130px;
+    width: 130px;
+    height: 130px;
+    top: 100px;
+    left: 300px;
+    position:fixed;
+}
+/*stylings for the first addition sign*/
+.add1 {
+    background-image: url('images/add.png');
+    background-size: 100px 100px;
+    width: 100px;
+    height: 100px;
+    top: 110px;
+    left: 450px;
+    position:fixed;
+}
+/*stylings for the image tag*/
+.addzero1{
+    background-image: url('images/zero0.png');
+    background-size: 130px 130px;
+    width: 130px;
+    height: 130px;
+    top: 100px;
+    left: 550px;
+    position:fixed;
+}
+/*stylings for the second addition sign*/
+  .add2 {
+    background-image: url('images/add.png');
+    background-size: 100px 100px;
+    width: 100px;
+    height: 100px;
+    top: 110px;
+    left: 750px;
+    position:fixed;
+}
+/*stylings for the image tag*/
+.addfive2{
+    background-image: url('images/five5.png');
+    background-size: 130px 130px;
+    width: 130px;
+    height: 130px;
+    top: 100px;
+    left: 850px;
+    position:fixed;
+}
+/*stylings for the image tag p1 and animations are applied*/
+.p1 {
+    background-image: url('images/six6.png');
+    background-size: 90px 90px;
+    width: 90px;
+    height: 90px;
+    position:absolute;
+    animation-name: p1Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    bottom: 200px;
+    top: 420px;
+    left:120px;
+}
+
+@keyframes p1Moving {
+     0% {
+    bottom: 10vw;
+    }
+    100% {
+      top: 10px;
+    }
+}
+/*stylings for the image tag p2 and animations are applied*/
+.p2 {
+    background-image: url('images/nine9.png');
+    background-size: 90px 90px;
+    width: 90px;
+    height: 90px;
+    position:fixed;
+    animation-name: p2Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    bottom: 200px;
+    top: 420px;
+    left:400px;
+}
+
+@keyframes p2Moving {
+    0% {
+      bottom: 10vw;
+    }
+    100% {
+       top: 10px;
+    }
+}
+/*stylings for the image tag p3 and animations are applied*/
+.p3 {
+    background-image: url('images/ten10.png');
+    background-size: 90px 90px;
+    width: 90px;
+    height: 90px;
+    position:fixed;
+    animation-name: p3Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    bottom: 200px;
+    top: 420px;
+    left:710px;
+}
+
+@keyframes p3Moving {
+     0% {
+     bottom: 80vw;
+    }
+     100% {
+    top: 10px;
+  }
+}
+/*stylings for the image tag p4 and animations are applied*/
+.p4 {
+    background-image: url('images/two2.png');
+    background-size: 90px 90px;
+    width: 90px;
+    height: 90px;
+    position:absolute;
+    animation-name: p4Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
+    bottom: 200px;
+    top: 420px;
+    left:1020px;
+}
+
+@keyframes p4Moving {
+    0% {
+   bottom: 80vw;
+   }
+   100% {
+     top: 10px;
+   }
+}
+/*stylings for the background image present on the question page 2 of addition medium level*/
+.addques2bg {
+    background-image: url('images/page1.png');
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+/*stylings for the image tag*/
+.addseven {
+     background-image: url('images/seven.png');
+     background-size: 128px 128px;
+     width: 120px;
+     height: 120px;
+     top: 100px;
+     left: 250px;
+     position:absolute;
+}
+/*stylings for the image tag*/
+.addone2 {
+     background-image: url('images/one.png');
+     background-size: 128px 128px;
+     width: 120px;
+     height: 120px;
+     top: 100px;
+     left: 600px;
+     position:fixed;
+}
+/*stylings for the image tag*/
+.addone4 {
+     background-image: url('images/one.png');
+     background-size: 128px 128px;
+     width: 120px;
+     height: 120px;
+     top: 100px;
+     left: 900px;
+     position:fixed;
+}
+/*stylings for the image tag p5 and animations are applied*/
+.p5 {
+     background-image: url('images/five.png');
+     background-size: 128px 128px;
+     width: 128px;
+     height: 128px;
+     animation-name: p5Moving;
+     animation-duration: 4s;
+     animation-iteration-count: infinite;
+     animation-timing-function: linear;
+     position: fixed;
+     bottom: 200px;
+     top: 400px;
+     left:170px;
+
+}
+
+@keyframes p5Moving {
+     0% {
+       top: 300px;
+     }
+     100% {
+       bottom: 100vw;
+     }
+}
+/*stylings for the image tag p6 and animations are applied*/
+.p6 {
+   background-image: url('images/nine.png');
+   background-size: 128px 128px;
+   width: 128px;
+   height: 128px;
+   animation-name: p6Moving;
+   animation-duration: 4s;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
+   position: fixed;
+   bottom: 200px;
+   top: 400px;
+   left:450px;
+
+ }
+
+@keyframes p6Moving {
+   0% {
+     bottom: 100vw;
+   }
+   100% {
+     top: 300px;
+   }
+}
+/*stylings for the image tag p7 and animations are applied*/
+.p7 {
+   background-image: url('images/three.png');
+   background-size: 128px 128px;
+   width: 128px;
+   height: 128px;
+   animation-name: p7Moving;
+   animation-duration: 4s;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
+   position: fixed;
+   bottom: 200px;
+   top: 400px;
+   left:700px;
+}
+
+@keyframes p7Moving {
+   0% {
+     top: 300px;
+   }
+   100% {
+     bottom: 100vw;
+   }
+}
+/*stylings for the image tag p8 and animations are applied*/
+.p8 {
+   background-image: url('images/six.png');
+   background-size: 128px 128px;
+   width: 128px;
+   height: 128px;
+   animation-name: p8Moving;
+   animation-duration: 4s;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
+   position: fixed;
+   bottom: 200px;
+   top: 400px;
+   left:950px;
+}
+
+@keyframes p8Moving {
+   0% {
+     bottom: 100vw;
+   }
+   100% {
+     top: 300px;
+   }
+}
+/*stylings for the background image present on the question page 3 of addition medium level*/
+.addques3bg {
+  background-image:url('images/sea.jpg');
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+/*stylings for the image tag*/
+.addtwo2 {
+    background-image: url('images/two2.png');
+    background-size: 130px 130px;
+    width: 130px;
+    height: 130px;
+    top: 100px;
+    left: 350px;
+    position:fixed;
+}
+/*stylings for the image tag*/
+.addthree1{
+    background-image: url('images/three3.png');
+    background-size: 130px 130px;
+    width: 130px;
+    height: 130px;
+    top: 100px;
+    left: 600px;
+    position:fixed;
+}
+/*stylings for the image tag*/
+.addfour2{
+    background-image: url('images/four4.png');
+    background-size: 130px 130px;
+    width: 130px;
+    height: 130px;
+    top: 100px;
+    left: 800px;
+    position:fixed;
+}
+/*stylings for the image tag s9 and animations are applied*/
+.p9 {
+    background-image: url('images/three3.png');
+    background-size: 80px 80px;
+    width: 80px;
+    height: 80px;
+    animation-name: p9Moving;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: fixed;
+    bottom: 200px;
+    top: 400px;
+    left:170px;
+}
+
+@keyframes p9Moving {
+    0% {
+      top: 300px;
+    }
+    100% {
+      bottom: 100vw;
+    }
+
+}
+/*stylings for the image tag p10 and animations are applied*/
+.p10 {
+    background-image: url('images/eight8.png');
+    background-size: 80px 80px;
+    width: 80px;
+    height: 80px;
+    animation-name: p10Moving;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: fixed;
+    bottom: 200px;
+    top: 400px;
+    left:450px;
+
+}
+
+@keyframes p10Moving {
+    0% {
+      bottom: 100vw;
+    }
+    100% {
+      top: 300px;
+    }
+
+}
+/*stylings for the image tag p11 and animations are applied*/
+.p11 {
+    background-image: url('images/nine9.png');
+    background-size: 80px 80px;
+    width: 80px;
+    height: 80px;
+    animation-name: p11Moving;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: fixed;
+    bottom: 200px;
+    top: 400px;
+    left:700px;
+
+}
+
+@keyframes p11Moving {
+    0% {
+      top: 300px;
+    }
+    100% {
+      bottom: 100vw;
+    }
+
+}
+/*stylings for the image tag p12 and animations are applied*/
+.p12 {
+    background-image: url('images/seven7.png');
+    background-size: 80px 80px;
+    width: 80px;
+    height: 80px;
+    animation-name: p12Moving;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: fixed;
+    bottom: 200px;
+    top: 400px;
+    left:950px;
+
+}
+
+@keyframes p12Moving {
+    0% {
+      bottom: 100vw;
+    }
+    100% {
+      top: 300px;
+    }
+}
+/*stylings for the background image present on the question page 4 of addition medium level*/
+.addques4bg {
+  background-image:url('images/moon.jpg');
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+/*stylings for the image tag*/
+.addnine {
+    background-image: url('images/nine.png');
+    background-size: 130px 130px;
+    width: 130px;
+    height: 130px;
+    top: 100px;
+    left: 300px;
+    position:fixed;
+}
+/*stylings for the image tag*/
+.addzero4{
+   background-image: url('images/zero.png');
+    background-size: 130px 130px;
+    width: 130px;
+    height: 130px;
+    top: 100px;
+    left: 600px;
+    position:fixed;
+}
+/*stylings for the image tag*/
+.addzero2{
+    background-image: url('images/zero.png');
+    background-size: 130px 130px;
+    width: 130px;
+    height: 130px;
+    top: 100px;
+    left: 900px;
+    position:fixed;
+}
+/*stylings for the image tag p13 and animations are applied*/
+.p13 {
+    background-image: url('images/five.png');
+    background-size: 90px 90px;
+    width: 90px;
+    height: 90px;
+    position:absolute;
+    animation-name: p13Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    bottom: 200px;
+    top: 440px;
+    left:180px;
+
+}
+
+@keyframes p13Moving {
+     0% {
+      top: 330px;
+    }
+    100% {
+      bottom: 100vw;
+    }
+
+}
+/*stylings for the image tag p14 and animations are applied*/
+.p14 {
+    background-image: url('images/nine.png');
+    background-size: 90px 90px;
+    width: 90px;
+    height: 90px;
+    position:fixed;
+    animation-name: p14Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    bottom: 200px;
+    top: 450px;
+    left:480px;
+
+}
+
+@keyframes p14Moving {
+    0% {
+      bottom: 100vw;
+    }
+    100% {
+      top: 330px;
+    }
+}
+/*stylings for the image tag p15 and animations are applied*/
+.p15 {
+    background-image: url('images/four.png');
+    background-size: 90px 90px;
+    width: 90px;
+    height: 90px;
+    position:fixed;
+    animation-name: p15Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    bottom: 200px;
+    top: 450px;
+    left:730px;
+
+}
+
+    @keyframes p15Moving {
+      0% {
+        top: 320px;
+      }
+      100% {
+        bottom: 110vw;
+      }
+}
+/*stylings for the image tag p16 and animations are applied*/
+.p16 {
+    background-image: url('images/two.png');
+    background-size: 90px 90px;
+    width: 90px;
+    height: 90px;
+    position:absolute;
+    animation-name: p16Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
+    bottom: 200px;
+    top: 440px;
+    left:980px;
+}
+
+@keyframes p16Moving {
+  0% {
+    bottom: 100vw;
+  }
+  100% {
+    top: 330px;
+  }
+}
+/*stylings for the background image present on the question page 5 of addition medium level*/
+.addques5bg {
+  background-image: url('images/page2.png');
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+/*stylings for the image tag*/
+.addsix1 {
+    background-image: url('images/six6.png');
+    background-size: 130px 130px;
+    width: 130px;
+    height: 130px;
+    top: 100px;
+    left: 300px;
+    position:fixed;
+}
+/*stylings for the image tag*/
+.addthree2 {
+    background-image: url('images/three3.png');
+    background-size: 130px 130px;
+    width: 130px;
+    height: 130px;
+    top: 100px;
+    left: 590px;
+    position:fixed;
+}
+/*stylings for the image tag*/
+.addone3 {
+    background-image: url('images/one1.png');
+    background-size: 130px 130px;
+    width: 130px;
+    height: 130px;
+    top: 100px;
+    left: 850px;
+    position:fixed;
+}
+/*stylings for the image tag p17 and animations are applied*/
+.p17 {
+    background-image: url('images/eight8.png');
+    background-size: 120px 120px;
+    width: 120px;
+    height: 120px;
+    top: 310px;
+    left: 610px;
+    position:absolute;
+    animation-name: p17Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    left: 100px;
+}
+
+@keyframes p17Moving {
+    0% {
+      left: 100px;
+    }
+    100% {
+      left: 450px;
+    }
+}
+/*stylings for the image tag p18 and animations are applied*/
+.p18 {
+    background-image: url('images/five5.png');
+    background-size: 120px 120px;
+    width: 120px;
+    height: 120px;
+    top: 310px;
+    left: 610px;
+    position:fixed;
+    animation-name: p18Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    left: 100px;
+}
+
+@keyframes p18Moving {
+      0% {
+        left: 80vw;
+      }
+      100% {
+        left: 650px;
+      }
+}
+/*stylings for the image tag p19 and animations are applied*/
+.p19 {
+    background-image: url('images/ten10.png');
+    background-size: 120px 120px;
+    width: 120px;
+    height: 120px;
+    top: 450px;
+    left: 610px;
+    position:fixed;
+    animation-name: p19Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    left: 100px;
+}
+
+@keyframes p19Moving {
+      0% {
+        left: 80vw;
+      }
+      100% {
+        left: 650px;
+      }
+}
+/*stylings for the image tag p20 and animations are applied*/
+.p20 {
+    background-image: url('images/four4.png');
+    background-size: 120px 120px;
+    width: 120px;
+    height: 120px;
+    top: 450px;
+    left: 250px;
+    position:absolute;
+    animation-name: p20Moving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    left: 100px;
+
+}
+
+@keyframes p20Moving {
+     0% {
+      left: 100px;
+    }
+    100% {
+      left: 450px;
+    }
+
+}
+/*stylings for the background image present on the question page 1 of subtraction medium level*/
+.subques1bg {
+    background-image: url('images/sky.png');
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+/*stylings for the image tag*/
+.subten {
+      background-image: url('images/ten10.png');
+      background-size: 130px 130px;
+      width: 130px;
+      height: 130px;
+      top: 100px;
+      left: 350px;
+      position:fixed;
+}
+/*stylings for the first subtraction sign*/
+.sub1 {
+      background-image: url('images/sub.png');
+      background-size: 100px 100px;
+      width: 100px;
+      height: 100px;
+      top: 110px;
+      left: 500px;
+      position:fixed;
+}
+/*stylings for the image tag*/
+.subthree1{
+      background-image: url('images/three3.png');
+      background-size: 130px 130px;
+      width: 130px;
+      height: 130px;
+      top: 100px;
+      left: 580px;
+      position:fixed;
+}
+/*stylings for the second subtraction tag*/
+.sub2 {
+      background-image: url('images/sub.png');
+      background-size: 100px 100px;
+      width: 100px;
+      height: 100px;
+      top: 110px;
+      left: 720px;
+      position:fixed;
+}
+/*stylings for the image tag*/
+.subone1{
+      background-image: url('images/one1.png');
+      background-size: 130px 130px;
+      width: 130px;
+      height: 130px;
+      top: 100px;
+      left: 800px;
+      position:fixed;
+}
+/*stylings for the image tag m1 and animations are applied*/
+.m1 {
+      background-image: url('images/six6.png');
+      background-size: 90px 90px;
+      width: 90px;
+      height: 90px;
+      position:absolute;
+      animation-name: m1Moving;
+      animation-duration: 8s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      bottom: 200px;
+      top: 420px;
+      left:120px;
+
+}
+
+@keyframes m1Moving {
+       0% {
+      bottom: 10vw;
+      }
+      100% {
+        top: 10px;
+      }
+}
+/*stylings for the image tag m2 and animations are applied*/
+.m2 {
+      background-image: url('images/eight8.png');
+      background-size: 90px 90px;
+      width: 90px;
+      height: 90px;
+      position:fixed;
+      animation-name: m2Moving;
+      animation-duration: 8s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      bottom: 200px;
+      top: 420px;
+      left:400px;
+}
+@keyframes m2Moving {
+      0% {
+        bottom: 10vw;
+      }
+      100% {
+        top: 10px;
+      }
+}
+/*stylings for the image tag m3 and animations are applied*/
+.m3 {
+      background-image: url('images/five5.png');
+      background-size: 90px 90px;
+      width: 90px;
+      height: 90px;
+      position:fixed;
+      animation-name: m3Moving;
+      animation-duration: 8s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      bottom: 200px;
+      top: 420px;
+      left:710px;
+}
+
+@keyframes m3Moving {
+       0% {
+       bottom: 80vw;
+      }
+       100% {
+      top: 10px;
+    }
+
+}
+/*stylings for the image tag m4 and animations are applied*/
+.m4 {
+      background-image: url('images/two2.png');
+      background-size: 90px 90px;
+      width: 90px;
+      height: 90px;
+      position:absolute;
+      animation-name: m4Moving;
+      animation-duration: 8s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      position: absolute;
+      bottom: 200px;
+      top: 420px;
+      left:1020px;
+
+}
+
+@keyframes m4Moving {
+      0% {
+     bottom: 80vw;
+     }
+     100% {
+       top: 10px;
+     }
+}
+/*stylings for the background image present on the question page 2 of subtraction medium level*/
+.subques2bg {
+      background-image:url('images/page1.png');
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: -1;
+}
+/*stylings for the image tag*/
+.subnine1 {
+      background-image: url('images/nine.png');
+      background-size: 110px 110px;
+      width: 110px;
+      height: 110px;
+      top: 100px;
+      left: 350px;
+      position:absolute;
+}
+
+/*stylings for the image tag*/
+.subfour1 {
+       background-image: url('images/four.png');
+       background-size: 110px 110px;
+       width: 110px;
+       height: 110px;
+       top: 100px;
+       left: 600px;
+       position:fixed;
+}
+/*stylings for the image tag*/
+.subtwo {
+       background-image: url('images/two.png');
+       background-size: 110px 110px;
+       width: 110px;
+       height: 110px;
+       top: 100px;
+       left: 850px;
+       position:fixed;
+}
+/*stylings for the image tag m5 and animations are applied*/
+.m5 {
+       background-image: url('images/five.png');
+       background-size: 128px 128px;
+       width: 128px;
+       height: 128px;
+       animation-name: m5Moving;
+       animation-duration: 4s;
+       animation-iteration-count: infinite;
+       animation-timing-function: linear;
+       position: fixed;
+       bottom: 200px;
+       top: 400px;
+       left:170px;
+
+}
+
+@keyframes m5Moving {
+       0% {
+         top: 300px;
+       }
+       100% {
+         bottom: 100vw;
+       }
+}
+/*stylings for the image tag m6 and animations are applied*/
+.m6 {
+     background-image: url('images/three.png');
+     background-size: 128px 128px;
+     width: 128px;
+     height: 128px;
+     animation-name: m6Moving;
+     animation-duration: 4s;
+     animation-iteration-count: infinite;
+     animation-timing-function: linear;
+     position: fixed;
+     bottom: 200px;
+     top: 400px;
+     left:450px;
+}
+
+@keyframes m6Moving {
+     0% {
+       bottom: 100vw;
+     }
+     100% {
+       top: 300px;
+     }
+}
+/*stylings for the image tag m7 and animations are applied*/
+.m7 {
+     background-image: url('images/nine.png');
+     background-size: 128px 128px;
+     width: 128px;
+     height: 128px;
+     animation-name: m7Moving;
+     animation-duration: 4s;
+     animation-iteration-count: infinite;
+     animation-timing-function: linear;
+     position: fixed;
+     bottom: 200px;
+     top: 400px;
+     left:700px;
+}
+
+@keyframes m7Moving {
+    0% {
+       top: 300px;
+     }
+     100% {
+       bottom: 100vw;
+     }
+}
+/*stylings for the image tag m8 and animations are applied*/
+.m8 {
+     background-image: url('images/seven.png');
+     background-size: 128px 128px;
+     width: 128px;
+     height: 128px;
+     animation-name: m8Moving;
+     animation-duration: 4s;
+     animation-iteration-count: infinite;
+     animation-timing-function: linear;
+     position: fixed;
+     bottom: 200px;
+     top: 400px;
+     left:950px;
+}
+
+@keyframes m8Moving {
+     0% {
+       bottom: 100vw;
+     }
+     100% {
+       top: 300px;
+     }
+}
+/*stylings for the background image present on the question page 3 of subtraction medium level*/
+.subques3bg {
+    background-image: url('images/sea.jpg');
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+/*stylings for the image tag*/
+.subfour2 {
+      background-image: url('images/four4.png');
+      background-size: 130px 130px;
+      width: 130px;
+      height: 130px;
+      top: 100px;
+      left: 350px;
+      position:fixed;
+}
+/*stylings for the image tag*/
+.subthree2{
+      background-image: url('images/three3.png');
+      background-size: 130px 130px;
+      width: 130px;
+      height: 130px;
+      top: 100px;
       left: 600px;
+      position:fixed;
+}
+/*stylings for the image tag*/
+.subzero1{
+      background-image: url('images/zero0.png');
+      background-size: 130px 130px;
+      width: 130px;
+      height: 130px;
+      top: 100px;
+      left: 800px;
+      position:fixed;
+}
+/*stylings for the image tag m9 and animations are applied*/
+.m9 {
+    background-image: url('images/three3.png');
+    background-size: 80px 80px;
+    width: 80px;
+    height: 80px;
+    animation-name: m9Moving;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: fixed;
+    bottom: 200px;
+    top: 400px;
+    left:170px;
+}
+
+@keyframes m9Moving {
+    0% {
+      top: 300px;
+    }
+    100% {
+      bottom: 100vw;
+    }
+
+}
+/*stylings for the image tag m10 and animations are applied*/
+.m10 {
+    background-image: url('images/eight8.png');
+    background-size: 80px 80px;
+    width: 80px;
+    height: 80px;
+    animation-name: m10Moving;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: fixed;
+    bottom: 200px;
+    top: 400px;
+    left:450px;
+
+}
+
+@keyframes m10Moving {
+    0% {
+      bottom: 100vw;
+    }
+    100% {
+      top: 300px;
+    }
+
+}
+/*stylings for the image tag m11 and animations are applied*/
+.m11 {
+    background-image: url('images/one1.png');
+    background-size: 80px 80px;
+    width: 80px;
+    height: 80px;
+    animation-name: m11Moving;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: fixed;
+    bottom: 200px;
+    top: 400px;
+    left:700px;
+
+}
+
+@keyframes m11Moving {
+    0% {
+      top: 300px;
+    }
+    100% {
+      bottom: 100vw;
+    }
+
+}
+/*stylings for the image tag m12 and animations are applied*/
+.m12 {
+    background-image: url('images/four4.png');
+    background-size: 80px 80px;
+    width: 80px;
+    height: 80px;
+    animation-name: m12Moving;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: fixed;
+    bottom: 200px;
+    top: 400px;
+    left:950px;
+
+}
+
+@keyframes m12Moving {
+    0% {
+      bottom: 100vw;
+    }
+    100% {
+      top: 300px;
     }
 }
 
-.a8 {
-  background-image: url('images/nine9.png');
-  background-size: 120px 120px;
-  width: 120px;
-  height: 120px;
-  top: 450px;
-  left: 250px;
-  position:absolute;
-  animation-name: a8Moving;
-  animation-duration: 8s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  position: absolute;
-  left: 100px;
-
+/*stylings for the background image present on the question page 4 of subtraction medium level*/
+.subques4bg {
+    background-image: url('images/moon.jpg');
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+/*stylings for the image tag*/
+.subeight1 {
+      background-image: url('images/eight.png');
+      background-size: 130px 130px;
+      width: 130px;
+      height: 130px;
+      top: 100px;
+      left: 300px;
+      position:fixed;
+}
+/*stylings for the image tag*/
+.subfive1 {
+      background-image: url('images/five.png');
+      background-size: 130px 130px;
+      width: 130px;
+      height: 130px;
+      top: 100px;
+      left: 600px;
+      position:fixed;
+}
+/*stylings for the image tag*/
+.subtwo1 {
+      background-image: url('images/two.png');
+      background-size: 130px 130px;
+      width: 130px;
+      height: 130px;
+      top: 100px;
+      left: 900px;
+      position:fixed;
+}
+/*stylings for the image tag m13 and animations are applied*/
+.m13 {
+      background-image: url('images/two.png');
+      background-size: 90px 90px;
+      width: 90px;
+      height: 90px;
+      position:absolute;
+      animation-name: p13Moving;
+      animation-duration: 8s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      bottom: 200px;
+      top: 440px;
+      left:180px;
   }
 
-  @keyframes a8Moving {
-   0% {
-    left: 100px;
-  }
-  100% {
-    left: 400px;
-  }
+@keyframes m13Moving {
+       0% {
+        top: 330px;
+      }
+      100% {
+        bottom: 100vw;
+      }
+}
+/*stylings for the image tag m14 and animations are applied*/
+.m14 {
+      background-image: url('images/one.png');
+      background-size: 90px 90px;
+      width: 90px;
+      height: 90px;
+      position:fixed;
+      animation-name: m14Moving;
+      animation-duration: 8s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      bottom: 200px;
+      top: 450px;
+      left:480px;
+}
 
-  }
+@keyframes m14Moving {
+      0% {
+        bottom: 100vw;
+      }
+      100% {
+        top: 330px;
+      }
+}
+/*stylings for the image tag m15 and animations are applied*/
+.m15 {
+      background-image: url('images/nine.png');
+      background-size: 90px 90px;
+      width: 90px;
+      height: 90px;
+      position:fixed;
+      animation-name: m15Moving;
+      animation-duration: 8s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      bottom: 200px;
+      top: 450px;
+      left:730px;
+}
 
-  #next {
- 
-   width: 84px;
-   height: 45px;
-   background: white;
-   color: black;
-   font-size:14px;
-   font-weight:700;
-   border-radius: 10px;
+@keyframes m15Moving {
+        0% {
+          top: 330px;
+        }
+        100% {
+          bottom: 110vw;
+        }
+}
+/*stylings for the image tag m16 and animations are applied*/
+.m16 {
+      background-image: url('images/six.png');
+      background-size: 90px 90px;
+      width: 90px;
+      height: 90px;
+      position:absolute;
+      animation-name: m16Moving;
+      animation-duration: 8s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      position: absolute;
+      bottom: 200px;
+      top: 440px;
+      left:980px;
+}
+
+@keyframes m16Moving {
+    0% {
+      bottom: 100vw;
+    }
+    100% {
+      top: 330px;
+    }
+}
+/*stylings for the background image present on the question page 5 of subtraction medium level*/
+.subques5bg {
+    background-image: url('images/page2.png');
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+/*stylings for the image tag*/
+.subten1 {
+      background-image: url('images/ten10.png');
+      background-size: 130px 130px;
+      width: 130px;
+      height: 130px;
+      top: 100px;
+      left: 350px;
+      position:fixed;
+}
+/*stylings for the image tag*/
+.subsix2 {
+      background-image: url('images/six6.png');
+      background-size: 130px 130px;
+      width: 130px;
+      height: 130px;
+      top: 100px;
+      left: 600px;
+      position:fixed;
+}
+/*stylings for the image tag*/
+.subone2 {
+      background-image: url('images/one1.png');
+      background-size: 130px 130px;
+      width: 130px;
+      height: 130px;
+      top: 100px;
+      left: 800px;
+      position:fixed;
+}
+/*stylings for the image tag m17 and animations are applied*/
+.m17 {
+      background-image: url('images/six6.png');
+      background-size: 120px 120px;
+      width: 120px;
+      height: 120px;
+      top: 310px;
+      left: 610px;
+      position:absolute;
+      animation-name: m17Moving;
+      animation-duration: 8s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      left: 100px;
 
 }
 
-#nextcnt {
-  text-align: center;
-  padding-top: 600px;
+@keyframes m17Moving {
+      0% {
+        left: 100px;
+      }
+      100% {
+        left: 450px;
+      }
+}
+/*stylings for the image tag m18 and animations are applied*/
+.m18 {
+      background-image: url('images/five5.png');
+      background-size: 120px 120px;
+      width: 120px;
+      height: 120px;
+      top: 310px;
+      left: 610px;
+      position:fixed;
+      animation-name: m18Moving;
+      animation-duration: 8s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      left: 100px;
+
 }
 
+@keyframes m18Moving {
+        0% {
+          left: 80vw;
+        }
+        100% {
+          left: 650px;
+        }
+}
+/*stylings for the image tag m19 and animations are applied*/
+.m19 {
+      background-image: url('images/seven7.png');
+      background-size: 120px 120px;
+      width: 120px;
+      height: 120px;
+      top: 450px;
+      left: 610px;
+      position:fixed;
+      animation-name: m19Moving;
+      animation-duration: 8s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      left: 100px;
 
-#score {
-
-   width: 84px;
-   height: 45px;
-   background: white;
-   color: black;
-   font-size:14px;
-   font-weight:700;
-   border-radius: 10px;
 }
 
-#score-container {
-  text-align: right;
-  
+@keyframes m19Moving {
+        0% {
+          left: 80vw;
+        }
+        100% {
+          left: 650px;
+        }
+}
+/*stylings for the image tag m20 and animations are applied*/
+.m20 {
+      background-image: url('images/three3.png');
+      background-size: 120px 120px;
+      width: 120px;
+      height: 120px;
+      top: 450px;
+      left: 250px;
+      position:absolute;
+      animation-name: m20Moving;
+      animation-duration: 8s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      left: 100px;
+
 }
 
-.qns3bg {
+@keyframes m20Moving {
+       0% {
+        left: 100px;
+      }
+      100% {
+        left: 450px;
+      }
 
-background-color: #3DD25D;
-width: 100%;
-height: 100%;
-
-background-repeat: no-repeat;
-background-size: cover;
-
-z-index: -1;
 }
+/*stylings for the back button which is present on every page of the app*/
+#back{
 
-.qns4bg {
-background-color: #8A61A9;
-width: 100%;
-height: 100%;
+     width: 84px;
+     height: 45px;
+     background: black;
+     color: white;
+     font-size:14px;
+     font-weight:700;
+     border-radius: 10px;
+     top: 0px;
+     left: 0px;
+     position:absolute;
+     font-family:Comic Sans MS;
+}
+/*stylings for the reset which is present on the final page*/
+#reset{
 
-background-repeat: no-repeat;
-background-size: cover;
-
-z-index: -1;
-
+     width: 84px;
+     height: 45px;
+     background: black;
+     color: white;
+     font-size:14px;
+     font-weight:700;
+     border-radius: 10px;
+     top: 300px;
+     left: 640px;
+     position:absolute;
+     font-family:Comic Sans MS;
 }
